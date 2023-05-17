@@ -1,0 +1,2 @@
+https://learn.microsoft.com/en-us/shows/learning-ai-with-github-copilot/
+https://github.com/gcordido/Learning-AI-with-Copilot/tree/main
