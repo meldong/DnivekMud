@@ -1,2 +1,7 @@
 https://learn.microsoft.com/en-us/shows/learning-ai-with-github-copilot/
 https://github.com/gcordido/Learning-AI-with-Copilot/tree/main
+https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
+
+
+deployment
+https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html
