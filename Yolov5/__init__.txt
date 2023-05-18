@@ -1,0 +1,1 @@
+https://www.syndicai.co/blog/deploy-a-pytorch-model
