@@ -3,6 +3,13 @@
 
 reference:
 https://www.youtube.com/watch?v=CjXgoYo86yY&ab_channel=MakeAppswithDanny
+https://v2.vuetifyjs.com/en/
+https://pixabay.com/
+https://materialdesignicons.com/
+https://dannys.link/vuetify
+
+>> npm install -g @vue/cli
+note: Vue CLI is based on webpack, while create-vue is based on Vite
 
 >> vue create vue-app
 
@@ -15,15 +22,15 @@ Vue CLI v5.0.8
 ? Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files
 ? Save this as a preset for future projects? (y/N) n
 
+>> cd vue-app
 >> vue add vuetify
 
 Default preset
 
-https://pixabay.com/
+>> npm i
+>> npm run serve
 
-https://materialdesignicons.com/
 
-https://dannys.link/vuetify
 
 #086491
 
