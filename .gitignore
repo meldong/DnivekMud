@@ -399,5 +399,5 @@ FodyWeavers.xsd
 
 # User-defined
 LearningAIwithGitHubCopilot/.venv/
-Yolov5/.venv/
-PythonNet/.venv/
+PlaywithYolov5/.venv/
+PlaywithPythonNet/.venv/
