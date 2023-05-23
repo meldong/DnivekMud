@@ -1,4 +1,30 @@
 Created on      May 23, 2023
 Last updated on May 23, 2023
 
-npm i jsonwebtoken
+https://www.npmjs.com/package/jsonwebtoken
+
+>> npm i jsonwebtoken
+
+>> npm config rm proxy
+>> npm config rm https-proxy
+>> npm config set proxy http://aenldong:seenDa10007029n@10.1.1.101:8080
+>> npm config set https-proxy http://aenldong:seenDa10007029n@10.1.1.101:8080
+
+>> npm config list
+; "builtin" config from C:\Program Files\nodejs\node_modules\npm\npmrc
+
+prefix = "C:\\Users\\aenldong\\AppData\\Roaming\\npm"
+
+; "user" config from C:\Users\aenldong\.npmrc
+
+https-proxy = "http://aenldong:seenDa10007029n@10.1.1.101:8080/"
+proxy = "http://aenldong:seenDa10007029n@10.1.1.101:8080/"
+registry = "https://registry.npmjs.org/"
+
+; node bin location = C:\Program Files\nodejs\node.exe
+; node version = v18.16.0
+; npm local prefix = C:\Bin\visualstudio\DnivekMud\PlaywithJsonwebtoken
+; npm version = 9.5.1
+; cwd = C:\Bin\visualstudio\DnivekMud\PlaywithJsonwebtoken
+; HOME = C:\Users\aenldong
+; Run `npm config ls -l` to show all defaults.
