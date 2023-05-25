@@ -8,6 +8,9 @@ https://pixabay.com/
 https://materialdesignicons.com/
 https://dannys.link/vuetify
 
+>> node -v
+16.16.0
+
 >> npm install -g @vue/cli
 note: Vue CLI is based on webpack, while create-vue is based on Vite
 
@@ -30,7 +33,16 @@ Default preset
 >> npm i
 >> npm run serve
 
+1. App.vue
+   * https://v2.vuetifyjs.com/en/getting-started/wireframes/
+   * https://v2.vuetifyjs.com/en/components/navigation-drawers/
+   * https://v2.vuetifyjs.com/en/components/icons/
+   * https://materialdesignicons.com/
+   * https://pictogrammers.com/library/mdi/
 
+
+2. router/index.js
+   * https://v2.vuetifyjs.com/en/components/application/#default-application-markup
 
 #086491
 
