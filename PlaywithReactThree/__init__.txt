@@ -1,0 +1,7 @@
+>> node -v
+18.16.0
+
+>> npm create vite@latest
+
+rafce to create new component
+
