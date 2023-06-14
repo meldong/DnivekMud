@@ -9,6 +9,8 @@
     </p>
     <v-text-field
       v-model="newTaskTitle"
+      @click:append="addTask()"
+      @keyup.enter="addTask()"
       class="pa-3"
       outlined
       label="Add Task"
@@ -52,20 +54,26 @@ export default {
   data: () => ({
     newTaskTitle: "",
     tasks: [
-      { id: 1, title: "Wake up", done: false },
-      { id: 2, title: "Do cleaning", done: false },
-      { id: 3, title: "Have breakfast", done: false },
+      //   { id: 1, title: "Wake up", done: false },
+      //   { id: 2, title: "Do cleaning", done: false },
+      //   { id: 3, title: "Have breakfast", done: false },
     ],
   }),
 
   methods: {
+    addTask() {
+      console.log("addTask triggered");
+      let newTask = { id: Date.now(), title: this.newTaskTitle, done: false };
+      this.tasks.push(newTask);
+      this.newTaskTitle = "";
+    },
     doneTask(id) {
-      console.log("id: ", id);
+      console.log("doneTask triggered with id: ", id);
       let task = this.tasks.filter((task) => task.id === id)[0];
       task.done = !task.done;
     },
     deleteTask(id) {
-      console.log("id: ", id);
+      console.log("deleteTask triggered with id: ", id);
       this.tasks = this.tasks.filter((task) => task.id !== id);
     },
   },
