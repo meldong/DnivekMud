@@ -62,19 +62,19 @@ export default {
 
   methods: {
     addTask() {
-      console.log("addTask triggered");
       let newTask = { id: Date.now(), title: this.newTaskTitle, done: false };
       this.tasks.push(newTask);
       this.newTaskTitle = "";
+      console.log("addTask id: " + newTask.id + ", title: " + newTask.title);
     },
     doneTask(id) {
-      console.log("doneTask triggered with id: ", id);
       let task = this.tasks.filter((task) => task.id === id)[0];
       task.done = !task.done;
+      console.log("doneTask id: ", id);
     },
     deleteTask(id) {
-      console.log("deleteTask triggered with id: ", id);
       this.tasks = this.tasks.filter((task) => task.id !== id);
+      console.log("deleteTask id: ", id);
     },
   },
 };
