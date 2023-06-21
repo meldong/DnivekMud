@@ -14,8 +14,17 @@
       reprehenderit perspiciatis temporibus asperiores esse corrupti, totam enim
       id. Eum voluptatibus voluptates facilis!
     </p>
-    <v-btn class="pink white--text">click me</v-btn>
-    <v-btn class="ml-3">click me</v-btn>
+    <v-btn class="mr-4">click me</v-btn>
+    <v-btn class="pink white--text mr-4">click me</v-btn>
+    <v-btn depressed color="pink" class="mr-4">click me</v-btn>
+    <v-btn plain color="pink" class="mr-4">click me</v-btn>
+    <v-btn depressed class="pink white--text mr-4">
+      <v-icon left>mdi-email</v-icon>
+      <span>email me</span>
+    </v-btn>
+    <v-btn fab depressed small dark color="purple">
+      <v-icon>mdi-heart</v-icon>
+    </v-btn>
   </div>
 </template>
 
