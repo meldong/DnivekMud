@@ -1,7 +1,7 @@
 <template>
   <div class="helloworld pa-6">
     <h1>Hello World</h1>
-    <p>
+    <p class="indigo lighten-4 blue--text text--darken-4">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit adipisci
       fugiat officia rerum ratione facilis cupiditate error blanditiis ipsum
       nisi totam, ipsa voluptates odio quidem reprehenderit alias? Vero quo fuga
@@ -14,6 +14,8 @@
       reprehenderit perspiciatis temporibus asperiores esse corrupti, totam enim
       id. Eum voluptatibus voluptates facilis!
     </p>
+    <v-btn class="pink white--text">click me</v-btn>
+    <v-btn class="ml-3">click me</v-btn>
   </div>
 </template>
 
