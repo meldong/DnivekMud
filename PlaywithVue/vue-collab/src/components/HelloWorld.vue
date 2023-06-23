@@ -28,6 +28,9 @@
       <v-btn class="d-md-none">hide md & up (960px)</v-btn>
     </div>
     <div class="my-2">
+      <v-btn class="d-none d-sm-flex d-md-none">show sm only</v-btn>
+    </div>
+    <div class="my-2">
       <v-btn class="d-none d-sm-inline">show sm & up (600px)</v-btn>
     </div>
   </div>
