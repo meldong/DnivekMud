@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home grey lighten-4">
     <hello-world />
     <Navbar />
   </div>
