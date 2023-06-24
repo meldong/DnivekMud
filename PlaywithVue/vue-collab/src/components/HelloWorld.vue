@@ -1,6 +1,6 @@
 <template>
   <div class="helloworld pa-6">
-    <h1>Hello World</h1>
+    <h1 class="subheading grey--text">Hello World</h1>
     <!-- text & color -->
     <p class="indigo lighten-4 blue--text text--darken-4">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod possimus
@@ -33,6 +33,14 @@
     <div class="my-2">
       <v-btn class="d-none d-sm-inline">show sm & up (600px)</v-btn>
     </div>
+    <!-- https://v2.vuetifyjs.com/en/components/grids/ -->
+    <v-container class="grey lighten-5">
+      <v-row no-gutters>
+        <v-col v-for="n in 3" :key="n" cols="12" sm="4">
+          <v-card class="pa-2" outlined tile> One of three columns </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
