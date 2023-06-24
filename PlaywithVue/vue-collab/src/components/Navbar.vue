@@ -16,7 +16,7 @@
       </v-btn>
     </v-toolbar>
 
-    <v-navigation-drawer v-model="drawer" app class="warning">
+    <v-navigation-drawer v-model="drawer" app class="success">
       <p>test</p>
     </v-navigation-drawer>
   </nav>
