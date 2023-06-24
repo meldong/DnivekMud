@@ -10,6 +10,8 @@
       dolore quod sed ut ea dolorum sapiente nihil blanditiis quasi, velit a.
     </p>
     <!-- button & icon -->
+    <h4 class="mt-6">Button</h4>
+    <v-divider class="mb-2"></v-divider>
     <v-btn>click me</v-btn>
     <v-btn class="pink white--text ml-2">click me</v-btn>
     <v-btn depressed color="pink" class="ml-2">click me</v-btn>
@@ -34,6 +36,8 @@
       <v-btn class="d-none d-sm-inline">show sm & up (600px)</v-btn>
     </div>
     <!-- https://v2.vuetifyjs.com/en/components/grids/ -->
+    <h4 class="mt-6">Grid System</h4>
+    <v-divider class="mb-2"></v-divider>
     <v-container class="grey lighten-5">
       <v-row no-gutters>
         <v-col v-for="n in 3" :key="n" cols="12" sm="4">
