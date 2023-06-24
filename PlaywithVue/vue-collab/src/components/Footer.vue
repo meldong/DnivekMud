@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p>footer</p>
+    <v-footer app>footer</v-footer>
   </div>
 </template>
 
