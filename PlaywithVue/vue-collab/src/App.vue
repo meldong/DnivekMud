@@ -41,10 +41,6 @@
     <v-main>
       <router-view />
     </v-main>
-
-    <v-footer app>
-      <!-- -->
-    </v-footer>
   </v-app>
 </template>
 
