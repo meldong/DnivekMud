@@ -38,7 +38,7 @@
     <!-- https://v2.vuetifyjs.com/en/components/grids/ -->
     <h4 class="mt-6">Grid System</h4>
     <v-divider class="mb-2"></v-divider>
-    <v-container class="grey lighten-5">
+    <v-container class="grey lighten-4">
       <v-row no-gutters>
         <v-col v-for="n in 3" :key="n" cols="12" sm="4">
           <v-card class="pa-2" outlined tile> One of three columns </v-card>
@@ -54,6 +54,34 @@
           <v-card class="pa-2" outlined tile> .col-6 .col-md-4 </v-card>
         </v-col>
       </v-row>
+      <v-row no-gutters>
+        <v-col v-for="n in 3" :key="n" cols="12" sm="4">
+          <v-card class="pa-2" outlined tile> One of three columns </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container class="grey lighten-4">
+      <v-card flat v-for="project in projects" :key="project.title">
+        <v-row no-gutters :class="`pa-3 project ${project.status}`">
+          <v-col cols="12" md="6">
+            <div class="caption grey--text">Project Title</div>
+            <div>{{ project.title }}</div>
+          </v-col>
+          <v-col cols="6" sm="4" md="2">
+            <div class="caption grey--text">Owner</div>
+            <div>{{ project.owner }}</div>
+          </v-col>
+          <v-col cols="6" sm="4" md="2">
+            <div class="caption grey--text">Due by</div>
+            <div>{{ project.due }}</div>
+          </v-col>
+          <v-col cols="6" sm="4" md="2">
+            <div class="caption grey--text">Status</div>
+            <div>{{ project.status }}</div>
+          </v-col>
+        </v-row>
+        <v-divider></v-divider>
+      </v-card>
     </v-container>
   </div>
 </template>
@@ -63,7 +91,48 @@ export default {
   name: "HelloWorld",
 
   data: () => ({
-    //
+    projects: [
+      {
+        title: "Design a new website",
+        owner: "Kevin",
+        due: "Jan 1, 2023",
+        status: "ongoing",
+        content: "",
+      },
+      {
+        title: "Code up the homepage",
+        owner: "Chun",
+        due: "Jan 10, 2023",
+        status: "complete",
+        content: "",
+      },
+      {
+        title: "Design video thumbnails",
+        owner: "Ryu",
+        due: "Dec 20, 2022",
+        status: "complete",
+        content: "",
+      },
+      {
+        title: "Create a community forum",
+        owner: "Gouken",
+        due: "Oct 20, 2022",
+        status: "overdue",
+        content: "",
+      },
+    ],
   }),
 };
 </script>
+
+<style>
+.project.complete {
+  border-left: 4px solid #3cd1c2;
+}
+.project.ongoing {
+  border-left: 4px solid orange;
+}
+.project.overdue {
+  border-left: 4px solid tomato;
+}
+</style>
