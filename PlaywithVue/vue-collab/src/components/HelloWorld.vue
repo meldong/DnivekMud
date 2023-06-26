@@ -98,28 +98,32 @@ export default {
         owner: "Kevin",
         due: "Jan 1, 2023",
         status: "ongoing",
-        content: "",
+        content:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, quis laboriosam assumenda delectus sint eveniet quia, sapiente vel ab cumque unde quas dicta eius suscipit voluptas a distinctio ullam veritatis!",
       },
       {
         title: "Code up the homepage",
         owner: "Chun",
         due: "Jan 10, 2023",
         status: "complete",
-        content: "",
+        content:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sit fugiat, dolore molestias, incidunt recusandae tempora unde sint esse, non repudiandae labore illo repellendus modi mollitia aspernatur temporibus neque! Culpa!",
       },
       {
         title: "Design video thumbnails",
         owner: "Ryu",
         due: "Dec 20, 2022",
         status: "complete",
-        content: "",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto eos blanditiis culpa harum doloremque molestias dolore deserunt laboriosam pariatur sit fugiat cum perferendis quibusdam libero minus consectetur, doloribus est.",
       },
       {
         title: "Create a community forum",
         owner: "Gouken",
         due: "Oct 20, 2022",
         status: "overdue",
-        content: "",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nostrum eos. Eligendi nemo optio dolorum in quos reiciendis assumenda id hic animi! Voluptates alias, nostrum voluptatum ipsa quas quo ab?",
       },
     ],
   }),
