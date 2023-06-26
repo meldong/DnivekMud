@@ -76,9 +76,14 @@
             <div>{{ project.due }}</div>
           </v-col>
           <v-col cols="6" sm="4" md="2">
-            <v-chip small :class="`${project.status} white--text caption my-2`">
-              {{ project.status }}
-            </v-chip>
+            <div class="text-right">
+              <v-chip
+                small
+                :class="`${project.status} white--text caption my-2`"
+              >
+                {{ project.status }}
+              </v-chip>
+            </div>
           </v-col>
         </v-row>
         <v-divider></v-divider>
