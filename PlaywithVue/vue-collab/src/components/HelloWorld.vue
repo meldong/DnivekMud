@@ -76,8 +76,9 @@
             <div>{{ project.due }}</div>
           </v-col>
           <v-col cols="6" sm="4" md="2">
-            <div class="caption grey--text">Status</div>
-            <div>{{ project.status }}</div>
+            <v-chip small :class="`${project.status} white--text caption my-2`">
+              {{ project.status }}
+            </v-chip>
           </v-col>
         </v-row>
         <v-divider></v-divider>
@@ -134,5 +135,17 @@ export default {
 }
 .project.overdue {
   border-left: 4px solid tomato;
+}
+.theme--dark.v-chip.complete,
+.theme--light.v-chip.complete {
+  background-color: #3cd1c2;
+}
+.theme--dark.v-chip.ongoing,
+.theme--light.v-chip.ongoing {
+  background: #ffaa2c;
+}
+.theme--dark.v-chip.overdue,
+.theme--light.v-chip.overdue {
+  background: #f83e70;
 }
 </style>
