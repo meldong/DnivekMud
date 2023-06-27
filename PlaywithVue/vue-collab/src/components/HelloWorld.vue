@@ -62,14 +62,38 @@
     </v-container>
     <v-container class="grey lighten-4">
       <v-row no-gutters class="mb-3">
-        <v-btn small plain color="grey">
-          <v-icon left small>mdi-folder</v-icon>
-          <span class="caption text-lowercase">By project name</span>
-        </v-btn>
-        <v-btn small plain color="grey">
-          <v-icon left small>mdi-account</v-icon>
-          <span class="caption text-lowercase">By owner</span>
-        </v-btn>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              small
+              plain
+              color="grey"
+              @click="sortBy('title')"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon left small>mdi-folder</v-icon>
+              <span class="caption text-lowercase">By project name</span>
+            </v-btn>
+          </template>
+          <span>Sort projects by project name</span>
+        </v-tooltip>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              small
+              plain
+              color="grey"
+              @click="sortBy('owner')"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon left small>mdi-account</v-icon>
+              <span class="caption text-lowercase">By owner</span>
+            </v-btn>
+          </template>
+          <span>Sort projects by owner</span>
+        </v-tooltip>
       </v-row>
       <v-card flat v-for="project in projects" :key="project.title">
         <v-row no-gutters :class="`pa-3 project ${project.status}`">
@@ -110,7 +134,7 @@ export default {
     projects: [
       {
         title: "Design a new website",
-        owner: "Kevin",
+        owner: "Dnivek",
         due: "Jan 1, 2023",
         status: "ongoing",
         content:
@@ -142,6 +166,11 @@ export default {
       },
     ],
   }),
+  methods: {
+    sortBy(prop) {
+      this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
+    },
+  },
 };
 </script>
 
