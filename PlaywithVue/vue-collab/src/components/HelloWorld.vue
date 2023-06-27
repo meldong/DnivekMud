@@ -123,6 +123,34 @@
         <v-divider></v-divider>
       </v-card>
     </v-container>
+    <!-- https://v2.vuetifyjs.com/en/components/cards/ -->
+    <h4 class="mt-6">Cards</h4>
+    <v-divider class="mb-2"></v-divider>
+    <v-container class="grey lighten-4">
+      <v-row no-gutters>
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+          v-for="person in team"
+          :key="person.name"
+        >
+          <v-card flat class="text-center ma-3">
+            <v-img class="pt-4" src="">image goes here</v-img>
+            <v-card-text>
+              <div class="subheading">{{ person.name }}</div>
+              <div class="grey--text">{{ person.role }}</div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn plain color="grey">
+                <v-icon small left>mdi-message</v-icon>
+                <span>Message</span>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -164,6 +192,13 @@ export default {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nostrum eos. Eligendi nemo optio dolorum in quos reiciendis assumenda id hic animi! Voluptates alias, nostrum voluptatum ipsa quas quo ab?",
       },
+    ],
+    team: [
+      { name: "Dnivek", role: "Web developer" },
+      { name: "Ryu", role: "Graphic designer" },
+      { name: "Chun", role: "Web developer" },
+      { name: "Gouken", role: "Social media maverick" },
+      { name: "Yoshi", role: "Sales guru" },
     ],
   }),
   methods: {
