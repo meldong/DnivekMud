@@ -61,6 +61,16 @@
       </v-row>
     </v-container>
     <v-container class="grey lighten-4">
+      <v-row no-gutters class="mb-3">
+        <v-btn small plain color="grey">
+          <v-icon left small>mdi-folder</v-icon>
+          <span class="caption text-lowercase">By project name</span>
+        </v-btn>
+        <v-btn small plain color="grey">
+          <v-icon left small>mdi-account</v-icon>
+          <span class="caption text-lowercase">By owner</span>
+        </v-btn>
+      </v-row>
       <v-card flat v-for="project in projects" :key="project.title">
         <v-row no-gutters :class="`pa-3 project ${project.status}`">
           <v-col cols="12" md="6">

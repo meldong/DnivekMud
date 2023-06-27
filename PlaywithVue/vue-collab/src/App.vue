@@ -50,6 +50,8 @@ export default {
 
   data: () => ({
     drawer: null,
+    // https://v2.vuetifyjs.com/en/components/icons/
+    // https://pictogrammers.com/library/mdi/
     items: [
       { title: "Home", icon: "mdi-home", to: "/" },
       { title: "Apps", icon: "mdi-view-dashboard", to: "/task" },
