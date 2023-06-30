@@ -2,3 +2,13 @@ Created on Jun 29, 2023
 
 https://levelup.gitconnected.com/create-a-simple-local-web-chat-application-with-websocket-f92130619ab7
 
+To use PM2 to run your Node.js app as a background process, you can follow these steps:
+
+>> npm install pm2 -g
+>> pm2 start app.js
+>> pm2 list
+>> pm2 monit
+
+>> pm2 stop <app-name> 
+>> pm2 restart <app-name> 
+>> pm2 delete <app-name> 
