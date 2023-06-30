@@ -2,42 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebSocket Client</title>
-    <link rel="shortcut icon" href="https://ahknts324.ahkex.asmpt.com/icons/simply-styled-w.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://ahknts324.ahkex.asmpt.com/icons/simply-styled-w.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
 </head>
 
 <body>
     <div class="container">
-        <h2 class="text-center">WebSocket Basics</h2>
-        <ul>
-            <li>allows two-way, event-driven communication between web browser and server</li>
-            <li>great for <strong>real-time</strong> applications</li>
-            <li>after this tutorial you should be able to create a simple Websockets app</li>
-        </ul>
-        <pre id="messages" style="width:100%;height:300px;overflow:scroll;border: 1px solid black;"></pre>
-        <input type="text" id="messageBox" placeholder="Type your message here"
-            style="display: block; width: 100%; margin-bottom: 10px; padding: 10px; " />
-        <button id="send" title="Send Message!" style="width: 100%; height: 30px;">Send
-            Message</button>
+        <h1 class="text-center mt-4">WebSocket Basics</h1>
+        <p class="text-center">
+            Real-time, two-way, event-driven communication between web browser and
+            server
+        </p>
+        <pre id="messages" class="pre-scrollable border border-primary text-muted p-2"
+            style="height: 300px; white-space: pre-wrap"></pre>
+        <input id="messageBox" type="text" class="form-control my-3" placeholder="Type your message here" />
+        <button id="send" type="button" class="btn btn-outline-success" style="width: 100%">
+            Send Message
+        </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         if ("WebSocket" in window) {
-            const sendBtn = document.querySelector('#send');
-            const messages = document.querySelector('#messages');
-            const messageBox = document.querySelector('#messageBox');
+            const sendBtn = document.querySelector("#send");
+            const messages = document.querySelector("#messages");
+            const messageBox = document.querySelector("#messageBox");
 
             function showMessage(message) {
                 messages.textContent += `\n${message}`;
                 messages.scrollTop = messages.scrollHeight;
-                messageBox.value = '';
+                messageBox.value = "";
             }
 
-            let ws = new WebSocket("ws://10.0.251.33:8082");  // localhost
+            let ws = new WebSocket("ws://10.0.251.33:8082"); // localhost
 
             ws.onopen = function () {
                 console.log("Connected to Server");
@@ -50,7 +50,7 @@
                 } else {
                     alert("ERROR: Not connected... refresh to try again!");
                 }
-            }
+            };
 
             ws.onmessage = function ({ data }) {
                 showMessage(`YOU: ${data}`);
@@ -60,7 +60,6 @@
                 ws = null;
                 alert("Connection closed... refresh to try again!");
             };
-
         } else {
             alert("WebSocket NOT supported by your Browser!");
         }
