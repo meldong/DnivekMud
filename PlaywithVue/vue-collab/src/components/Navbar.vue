@@ -17,13 +17,18 @@
     </v-toolbar>
 
     <v-navigation-drawer v-model="drawer" app>
-      <div class="mx-auto text-center mt-8">
-        <v-avatar size="120">
-          <img src="https://cdn.vuetifyjs.com/images/john.png" alt="John" />
-        </v-avatar>
-        <h3 class="subheading mt-1">John Doe</h3>
-        <p class="text-caption mt-1">john.doe@outlook.com</p>
-      </div>
+      <v-list-item class="mt-8">
+        <v-list-item-content class="justify-center">
+          <div class="mx-auto text-center">
+            <v-avatar size="120">
+              <img src="https://cdn.vuetifyjs.com/images/john.png" alt="John" />
+            </v-avatar>
+            <h3 class="mt-2">John Doe</h3>
+            <p class="text-caption mt-1">john.doe@dnivek.com</p>
+          </div>
+        </v-list-item-content>
+      </v-list-item>
+
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <v-list-item-icon>
