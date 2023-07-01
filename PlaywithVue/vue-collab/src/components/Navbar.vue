@@ -10,6 +10,24 @@
         <span>nivek</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn plain color="grey" dark v-bind="attrs" v-on="on">
+            <v-icon left>mdi-chevron-down</v-icon>
+            <span>Menu</span>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+            :to="item.to"
+            link
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-btn plain color="grey">
         <span>Sign Out</span>
         <v-icon right>mdi-exit-to-app</v-icon>
@@ -25,6 +43,10 @@
             </v-avatar>
             <h3 class="mt-2">John Doe</h3>
             <p class="text-caption mt-1">john.doe@dnivek.com</p>
+            <v-divider class="my-3"></v-divider>
+            <v-btn depressed rounded text> Edit Account </v-btn>
+            <v-divider class="my-3"></v-divider>
+            <v-btn depressed rounded text> Disconnect </v-btn>
           </div>
         </v-list-item-content>
       </v-list-item>
