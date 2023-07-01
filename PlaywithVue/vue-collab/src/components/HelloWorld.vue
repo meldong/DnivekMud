@@ -123,21 +123,6 @@
         <v-divider></v-divider>
       </v-card>
     </v-container>
-    <!-- https://v2.vuetifyjs.com/en/components/expansion-panels/ -->
-    <h4 class="mt-6">Expansion Panels</h4>
-    <v-divider class="mb-2"></v-divider>
-    <v-container class="grey lighten-4">
-      <v-expansion-panels>
-        <v-expansion-panel v-for="project in projects" :key="project.title">
-          <v-expansion-panel-header>
-            {{ project.title }}
-          </v-expansion-panel-header>
-          <v-expansion-panel-content>
-            {{ project.content }}
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
-    </v-container>
     <!-- https://v2.vuetifyjs.com/en/components/cards/ -->
     <h4 class="mt-6">Cards</h4>
     <v-divider class="mb-2"></v-divider>
@@ -169,6 +154,21 @@
           </v-card>
         </v-col>
       </v-row>
+    </v-container>
+    <!-- https://v2.vuetifyjs.com/en/components/expansion-panels/ -->
+    <h4 class="mt-6">Expansion Panels</h4>
+    <v-divider class="mb-2"></v-divider>
+    <v-container class="grey lighten-4">
+      <v-expansion-panels>
+        <v-expansion-panel v-for="project in projects" :key="project.title">
+          <v-expansion-panel-header>
+            {{ project.title }}
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            {{ project.content }}
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </v-container>
   </div>
 </template>
