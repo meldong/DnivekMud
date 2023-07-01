@@ -1,6 +1,6 @@
 <template>
   <div class="home grey lighten-4">
-    <Navbar />
+    <!-- <Navbar /> -->
     <hello-world />
     <Footer></Footer>
   </div>
