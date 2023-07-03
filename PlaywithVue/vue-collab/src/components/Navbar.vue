@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-toolbar flat app>
+    <v-toolbar flat>
       <v-app-bar-nav-icon
         class="grey--text"
         @click="drawer = !drawer"
