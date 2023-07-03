@@ -1,6 +1,6 @@
 <template>
   <div class="helloworld pa-6">
-    <h1 class="subheading grey--text">Hello World</h1>
+    <h1 class="subheading grey--text">Home</h1>
     <!-- text & color -->
     <p class="indigo lighten-4 blue--text text--darken-4">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod possimus
@@ -155,6 +155,22 @@
         </v-col>
       </v-row>
     </v-container>
+    <!-- https://v2.vuetifyjs.com/en/components/expansion-panels/ -->
+    <h4 class="mt-6">Expansion Panels</h4>
+    <v-divider class="mb-2"></v-divider>
+    <v-container class="grey lighten-4">
+      <v-expansion-panels>
+        <v-expansion-panel v-for="project in myProjects" :key="project.title">
+          <v-expansion-panel-header>
+            {{ project.title }}
+          </v-expansion-panel-header>
+          <v-expansion-panel-content class="grey--text px-4">
+            <div class="font-weight-bold">due by {{ project.due }}</div>
+            <div>{{ project.content }}</div>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </v-container>
   </div>
 </template>
 
@@ -196,6 +212,14 @@ export default {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nostrum eos. Eligendi nemo optio dolorum in quos reiciendis assumenda id hic animi! Voluptates alias, nostrum voluptatum ipsa quas quo ab?",
       },
+      {
+        title: "Run own business",
+        owner: "Dnivek",
+        due: "Jul 1, 2023",
+        status: "complete",
+        content:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore, fugiat optio, laboriosam officia minima voluptates ab nemo quas qui eos autem? Sed nihil, at dolore aut dolorem magni repellat.",
+      },
     ],
     team: [
       { name: "Dnivek", role: "Web developer", avatar: "/avatar-1.png" },
@@ -212,6 +236,11 @@ export default {
   methods: {
     sortBy(prop) {
       this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
+    },
+  },
+  computed: {
+    myProjects() {
+      return this.projects.filter((project) => project.owner === "Dnivek");
     },
   },
 };
