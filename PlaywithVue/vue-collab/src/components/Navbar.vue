@@ -43,10 +43,7 @@
             </v-avatar>
             <h3 class="mt-2">John Doe</h3>
             <p class="text-caption mt-1">john.doe@dnivek.com</p>
-            <v-divider class="my-3"></v-divider>
-            <v-btn depressed rounded text> Edit Account </v-btn>
-            <v-divider class="my-3"></v-divider>
-            <v-btn depressed rounded text> Disconnect </v-btn>
+            <Popup />
           </div>
         </v-list-item-content>
       </v-list-item>
@@ -67,8 +64,14 @@
 </template>
 
 <script>
+import Popup from "../components/Popup";
+
 export default {
   Name: "Navbar",
+
+  components: {
+    Popup,
+  },
 
   data: () => ({
     drawer: false,
