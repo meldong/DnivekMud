@@ -12,7 +12,7 @@
           Add New Project
         </v-card-title>
 
-        <v-card-text>
+        <v-card-text class="mt-4">
           <v-form ref="form">
             <v-text-field
               v-model="title"
