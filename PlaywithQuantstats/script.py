@@ -10,7 +10,7 @@ import yfinance as yf
 
 # Getting daily returns for 4 different US stocks in the same time window
 aapl = qs.utils.download_returns('AAPL')
-aapl = aapl.loc['2010-07-01':'2023-02-10']
+aapl = aapl.loc['2020-07-01':'2023-02-10']
  
 tsla = qs.utils.download_returns('TSLA')
 tsla = tsla.loc['2010-07-01':'2023-02-10']
