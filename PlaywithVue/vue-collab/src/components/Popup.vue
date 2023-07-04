@@ -62,7 +62,15 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="success" text @click="submit"> Add Project </v-btn>
+          <v-btn
+            color="success"
+            text
+            @click="submit"
+            :loading="loading"
+            :disabled="loading"
+          >
+            Add Project
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -94,10 +102,13 @@ export default {
     date: format(parseISO(new Date().toISOString()), "yyyy-MM-dd"),
     dateRules: [(v) => !!v || "Due date is required"],
     due: false,
+    loading: false,
   }),
   methods: {
     async submit() {
       if (this.$refs.form.validate()) {
+        this.loading = true;
+
         const project = {
           title: this.title,
           content: this.content,
@@ -109,7 +120,7 @@ export default {
         try {
           const docRef = await addDoc(collection(db, "projects"), project);
           console.log("Document written with ID: ", docRef.id);
-          console.log(this.title, this.content);
+          this.loading = false;
           this.dialog = false;
         } catch (e) {
           console.error("Error adding document: ", e);
