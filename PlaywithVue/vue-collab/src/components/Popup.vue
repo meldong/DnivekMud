@@ -17,6 +17,7 @@
             <v-text-field
               v-model="title"
               :counter="20"
+              :rules="titleRules"
               label="Title"
               prepend-icon="mdi-folder"
               required
@@ -24,10 +25,36 @@
 
             <v-textarea
               v-model="content"
+              :counter="140"
+              :rules="contentRules"
               label="Information"
               prepend-icon="mdi-pencil"
               required
             ></v-textarea>
+
+            <v-menu
+              v-model="due"
+              :close-on-content-click="false"
+              max-width="290"
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-text-field
+                  :value="formattedDate"
+                  clearable
+                  :rules="dateRules"
+                  label="Due date"
+                  prepend-icon="mdi-calendar-today"
+                  readonly
+                  v-bind="attrs"
+                  v-on="on"
+                  @click:clear="date = null"
+                ></v-text-field>
+              </template>
+              <v-date-picker
+                v-model="date"
+                @change="due = false"
+              ></v-date-picker>
+            </v-menu>
           </v-form>
         </v-card-text>
 
@@ -43,18 +70,40 @@
 </template>
 
 <script>
+import { format, parseISO } from "date-fns";
+
 export default {
   name: "Popup",
 
   data: () => ({
     dialog: false,
     title: "",
+    titleRules: [
+      (v) => !!v || "Title is required",
+      (v) => (v && v.length <= 20) || "Title must be less than 20 characters",
+    ],
     content: "",
+    contentRules: [
+      (v) => !!v || "Information is required",
+      (v) =>
+        (v && v.length <= 140) ||
+        "Information must be less than 140 characters",
+    ],
+    date: format(parseISO(new Date().toISOString()), "yyyy-MM-dd"),
+    dateRules: [(v) => !!v || "Due date is required"],
+    due: false,
   }),
   methods: {
     submit() {
-      console.log(this.title, this.content);
-      this.dialog = false;
+      if (this.$refs.form.validate()) {
+        console.log(this.title, this.content);
+        this.dialog = false;
+      }
+    },
+  },
+  computed: {
+    formattedDate() {
+      return this.date ? format(parseISO(this.date), "do MMMM yyyy") : "";
     },
   },
 };
