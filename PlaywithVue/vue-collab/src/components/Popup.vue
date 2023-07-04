@@ -71,6 +71,8 @@
 
 <script>
 import { format, parseISO } from "date-fns";
+import db from "@/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 export default {
   name: "Popup",
@@ -94,10 +96,24 @@ export default {
     due: false,
   }),
   methods: {
-    submit() {
+    async submit() {
       if (this.$refs.form.validate()) {
-        console.log(this.title, this.content);
-        this.dialog = false;
+        const project = {
+          title: this.title,
+          content: this.content,
+          due: format(parseISO(this.date), "do MMMM yyyy"),
+          person: "Dnivek",
+          status: "ongoing",
+        };
+
+        try {
+          const docRef = await addDoc(collection(db, "projects"), project);
+          console.log("Document written with ID: ", docRef.id);
+          console.log(this.title, this.content);
+          this.dialog = false;
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
       }
     },
   },
