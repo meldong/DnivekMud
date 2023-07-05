@@ -16,7 +16,7 @@
           <v-form ref="form">
             <v-text-field
               v-model="title"
-              :counter="20"
+              :counter="30"
               :rules="titleRules"
               label="Title"
               prepend-icon="mdi-folder"
@@ -90,7 +90,7 @@ export default {
     title: "",
     titleRules: [
       (v) => !!v || "Title is required",
-      (v) => (v && v.length <= 20) || "Title must be less than 20 characters",
+      (v) => (v && v.length <= 30) || "Title must be less than 30 characters",
     ],
     content: "",
     contentRules: [
