@@ -1,3 +1,5 @@
+// https://firebase.google.com/docs/firestore/quickstart
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -5,6 +7,7 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// https://console.firebase.google.com/project/meldong/settings/general
 const firebaseConfig = {
   apiKey: "AIzaSyACh_AXa4asc1VPD632sLNiWTWIbmkxq4w",
   authDomain: "meldong.firebaseapp.com",

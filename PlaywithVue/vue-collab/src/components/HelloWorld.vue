@@ -215,6 +215,7 @@ export default {
       return this.projects.filter((project) => project.person === "Dnivek");
     },
   },
+  // https://firebase.google.com/docs/firestore/query-data/listen
   created() {
     const unsubscribe = onSnapshot(collection(db, "projects"), (res) => {
       res.docChanges().forEach((change) => {

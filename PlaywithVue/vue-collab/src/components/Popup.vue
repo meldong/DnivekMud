@@ -104,6 +104,7 @@ export default {
     due: false,
     loading: false,
   }),
+  // https://firebase.google.com/docs/firestore/manage-data/add-data
   methods: {
     async submit() {
       if (this.$refs.form.validate()) {
