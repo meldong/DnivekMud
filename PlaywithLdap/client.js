@@ -1,39 +1,48 @@
 const ldap = require("ldapjs");
 
-// Create a client
+// Set up the LDAP client
 const client = ldap.createClient({
-  url: ["ldap://127.0.0.1:1389", "ldap://127.0.0.2:1389"],
+  url: "ldap://127.0.0.1:1389", // Specify the correct LDAP server URL
 });
 
-client.on("connectError", (err) => {
-  // handle connection error
-});
-
-// Bind
-client.bind("cn=root", "secret", (err) => {
+// Bind to the LDAP server
+client.bind("cn=admin", "password", (err) => {
   if (err) {
     console.error("LDAP bind error:", err);
     return;
   }
   console.log("LDAP bind successful");
 
-  // Create a new object and add it to the directory
-  //   const entry = {
-  //     cn: "foo",
-  //     sn: "bar",
-  //     email: ["foo@bar.com", "foo1@bar.com"],
-  //     objectclass: "fooPerson",
-  //   };
+  // Search for an object
+  const opts = {
+    filter: "(cn=admin)", // Specify a valid search filter
+    scope: "sub",
+  };
+  client.search("dc=example,dc=com", opts, (err, res) => {
+    if (err) {
+      console.error("LDAP search error:", err);
+      return;
+    }
 
-  //   client.add("cn=foo, o=example", entry, (err) => {
-  //     if (err) {
-  //       console.error("LDAP add error:", err);
-  //       return;
-  //     }
+    res.on("searchEntry", (entry) => {
+      console.log("LDAP search result:", entry.object);
+    });
 
-  //     console.log("LDAP add successful");
-  //   });
+    res.on("error", (err) => {
+      console.error("LDAP search error:", err);
+    });
 
-  // Unbind from the LDAP server
-  client.unbind();
+    res.on("end", () => {
+      console.log("LDAP search complete");
+
+      // Unbind from the LDAP server
+      client.unbind((err) => {
+        if (err) {
+          console.error("LDAP unbind error:", err);
+          return;
+        }
+        console.log("LDAP unbind successful");
+      });
+    });
+  });
 });
