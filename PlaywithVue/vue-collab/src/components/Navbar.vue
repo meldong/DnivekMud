@@ -1,5 +1,13 @@
 <template>
   <nav>
+    <v-snackbar v-model="snackbar" top color="success">
+      {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn color="white" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
     <v-toolbar flat>
       <v-app-bar-nav-icon
         class="grey--text"
@@ -43,7 +51,7 @@
             </v-avatar>
             <h3 class="mt-2">John Doe</h3>
             <p class="text-caption mt-1">john.doe@dnivek.com</p>
-            <Popup />
+            <Popup @projectAdded="snackbar = true" />
           </div>
         </v-list-item-content>
       </v-list-item>
@@ -80,6 +88,8 @@ export default {
       { title: "Apps", icon: "mdi-view-dashboard", to: "/task" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
+    snackbar: false,
+    text: `Awesome, you added a new project.`,
   }),
 };
 </script>
