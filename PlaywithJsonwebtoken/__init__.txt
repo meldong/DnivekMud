@@ -3,7 +3,12 @@ Last updated on May 23, 2023
 
 https://www.npmjs.com/package/jsonwebtoken
 
->> npm i jsonwebtoken
+>> npm init -y
+>> npm install nodemon -g
+>> nodemon -v
+2.0.22
+>> npm install express
+>> npm install jsonwebtoken
 
 >> npm config rm proxy
 >> npm config rm https-proxy
