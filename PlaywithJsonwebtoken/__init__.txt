@@ -8,6 +8,9 @@ https://www.npmjs.com/package/jsonwebtoken
 >> nodemon -v
 2.0.22
 >> npm install express
+>> npm run start
+>> npm install express-validator
+>> npm install bcrypt
 >> npm install jsonwebtoken
 
 >> npm config rm proxy
