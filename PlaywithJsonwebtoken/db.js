@@ -31,4 +31,4 @@ const privatePosts = [
   },
 ];
 
-module.exports = { users };
+module.exports = { users, publicPosts, privatePosts };
