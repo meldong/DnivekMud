@@ -1,0 +1,6 @@
+Created on Jul 10, 2023
+
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+https://developer.mozilla.org/en-US/docs/Games
+https://codepen.io/search/pens?q=canvas
+
