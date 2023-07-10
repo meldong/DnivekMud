@@ -61,6 +61,46 @@ router.post(
   }
 );
 
+router.post("/login", async (req, res) => {
+  // User provides email and password
+  const { email, password } = req.body;
+  console.log(email, password);
+
+  // Get user with that email
+  let user = users.find((user) => {
+    return user.email === email;
+  });
+  if (user === undefined) {
+    return res.status(400).json({
+      errors: [
+        {
+          msg: "Invalid credentials.",
+        },
+      ],
+    });
+  }
+
+  // Compare hashed password to the password provided
+  let isMatch = await bcrypt.compare(password, user.password);
+  if (isMatch === false) {
+    return res.status(400).json({
+      errors: [
+        {
+          msg: "Invalid credentials.",
+        },
+      ],
+    });
+  }
+
+  // Send jwt
+  const token = await jwt.sign({ email: email }, "123456", {
+    expiresIn: 3600000,
+  });
+  console.log(token);
+
+  res.json({ token });
+});
+
 router.get("/users", (req, res) => {
   res.json(users);
 });
