@@ -84,26 +84,26 @@
               small
               plain
               color="grey"
-              @click="sortBy('owner')"
+              @click="sortBy('person')"
               v-bind="attrs"
               v-on="on"
             >
               <v-icon left small>mdi-account</v-icon>
-              <span class="caption text-lowercase">By owner</span>
+              <span class="caption text-lowercase">By person</span>
             </v-btn>
           </template>
-          <span>Sort projects by owner</span>
+          <span>Sort projects by person</span>
         </v-tooltip>
       </v-row>
-      <v-card flat v-for="project in projects" :key="project.title">
+      <v-card flat v-for="project in projects" :key="project.id">
         <v-row no-gutters :class="`pa-3 project ${project.status}`">
           <v-col cols="12" md="6">
             <div class="caption grey--text">Project Title</div>
             <div>{{ project.title }}</div>
           </v-col>
           <v-col cols="6" sm="4" md="2">
-            <div class="caption grey--text">Owner</div>
-            <div>{{ project.owner }}</div>
+            <div class="caption grey--text">Person</div>
+            <div>{{ project.person }}</div>
           </v-col>
           <v-col cols="6" sm="4" md="2">
             <div class="caption grey--text">Due by</div>
@@ -160,7 +160,7 @@
     <v-divider class="mb-2"></v-divider>
     <v-container class="grey lighten-4">
       <v-expansion-panels>
-        <v-expansion-panel v-for="project in myProjects" :key="project.title">
+        <v-expansion-panel v-for="project in myProjects" :key="project.id">
           <v-expansion-panel-header>
             {{ project.title }}
           </v-expansion-panel-header>
@@ -175,50 +175,22 @@
 </template>
 
 <script>
+import db from "@/firebase";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
+
 export default {
   name: "HelloWorld",
 
   data: () => ({
     projects: [
       {
-        title: "Design a new website",
-        owner: "Dnivek",
-        due: "Jan 1, 2023",
-        status: "ongoing",
-        content:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, quis laboriosam assumenda delectus sint eveniet quia, sapiente vel ab cumque unde quas dicta eius suscipit voluptas a distinctio ullam veritatis!",
-      },
-      {
+        id: "6UJnzYnb2VAxydXgGnSS",
         title: "Code up the homepage",
-        owner: "Chun",
-        due: "Jan 10, 2023",
+        person: "Chun",
+        due: "10th Jan 2023",
         status: "complete",
         content:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sit fugiat, dolore molestias, incidunt recusandae tempora unde sint esse, non repudiandae labore illo repellendus modi mollitia aspernatur temporibus neque! Culpa!",
-      },
-      {
-        title: "Design video thumbnails",
-        owner: "Ryu",
-        due: "Dec 20, 2022",
-        status: "complete",
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto eos blanditiis culpa harum doloremque molestias dolore deserunt laboriosam pariatur sit fugiat cum perferendis quibusdam libero minus consectetur, doloribus est.",
-      },
-      {
-        title: "Create a community forum",
-        owner: "Gouken",
-        due: "Oct 20, 2022",
-        status: "overdue",
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nostrum eos. Eligendi nemo optio dolorum in quos reiciendis assumenda id hic animi! Voluptates alias, nostrum voluptatum ipsa quas quo ab?",
-      },
-      {
-        title: "Run own business",
-        owner: "Dnivek",
-        due: "Jul 1, 2023",
-        status: "complete",
-        content:
-          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore, fugiat optio, laboriosam officia minima voluptates ab nemo quas qui eos autem? Sed nihil, at dolore aut dolorem magni repellat.",
       },
     ],
     team: [
@@ -240,8 +212,30 @@ export default {
   },
   computed: {
     myProjects() {
-      return this.projects.filter((project) => project.owner === "Dnivek");
+      return this.projects.filter((project) => project.person === "Dnivek");
     },
+  },
+  // https://firebase.google.com/docs/firestore/query-data/listen
+  created() {
+    const unsubscribe = onSnapshot(collection(db, "projects"), (res) => {
+      res.docChanges().forEach((change) => {
+        if (change.type === "added") {
+          console.log("New project: ", change.doc.data());
+          this.projects.push({
+            ...change.doc.data(),
+            id: change.doc.id,
+          });
+        }
+        if (change.type === "modified") {
+          console.log("Modified project: ", change.doc.data());
+        }
+        if (change.type === "removed") {
+          console.log("Removed project: ", change.doc.data());
+        }
+      });
+    });
+    // Stop listening to changes
+    // unsubscribe();
   },
 };
 </script>

@@ -1,6 +1,14 @@
 <template>
   <nav>
-    <v-toolbar flat app>
+    <v-snackbar v-model="snackbar" top color="success">
+      {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn color="white" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
+    <v-toolbar flat>
       <v-app-bar-nav-icon
         class="grey--text"
         @click="drawer = !drawer"
@@ -43,10 +51,7 @@
             </v-avatar>
             <h3 class="mt-2">John Doe</h3>
             <p class="text-caption mt-1">john.doe@dnivek.com</p>
-            <v-divider class="my-3"></v-divider>
-            <v-btn depressed rounded text> Edit Account </v-btn>
-            <v-divider class="my-3"></v-divider>
-            <v-btn depressed rounded text> Disconnect </v-btn>
+            <Popup @projectAdded="snackbar = true" />
           </div>
         </v-list-item-content>
       </v-list-item>
@@ -67,8 +72,14 @@
 </template>
 
 <script>
+import Popup from "../components/Popup";
+
 export default {
   Name: "Navbar",
+
+  components: {
+    Popup,
+  },
 
   data: () => ({
     drawer: false,
@@ -77,6 +88,8 @@ export default {
       { title: "Apps", icon: "mdi-view-dashboard", to: "/task" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
+    snackbar: false,
+    text: `Awesome, you added a new project.`,
   }),
 };
 </script>
