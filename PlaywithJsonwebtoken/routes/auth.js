@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { check, validationResult } = require("express-validator");
 const { users } = require("../db");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 router.get("/", (req, res) => {
   res.send("auth route working");
@@ -19,6 +20,7 @@ router.post(
     }),
   ],
   async (req, res) => {
+    // User provides email and password
     const { email, password } = req.body;
     console.log(email, password);
 
@@ -28,7 +30,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    // validate if user does not exist
+    // validate if usern with that email does not exist
     let user = users.find((user) => {
       return user.email === email;
     });
@@ -47,7 +49,15 @@ router.post(
     users.push({ email: email, password: hashedPassword });
     console.log(hashedPassword);
 
-    res.send("auth/signup route working");
+    // save user to db
+
+    // send jwt
+    const token = await jwt.sign({ email: email }, "123456", {
+      expiresIn: 3600000,
+    });
+    console.log(token);
+
+    res.json({ token });
   }
 );
 

@@ -15,10 +15,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Now running on port ${port}!`);
 });
-
-// User provides email and password
-// Validate email and password
-// Validate if user with that email does not exist
-// hash password
-// save user to db
-// send jwt
