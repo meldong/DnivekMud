@@ -5,4 +5,30 @@ const users = [
   },
 ];
 
+const publicPosts = [
+  {
+    title: "Free Tips on Development",
+    content: "There are some tips.",
+  },
+  {
+    title: "Free Tips on Development",
+    content: "There are some tips.",
+  },
+  {
+    title: "Free Tips on Development",
+    content: "There are some tips.",
+  },
+];
+
+const privatePosts = [
+  {
+    title: "Paid Tips on Development",
+    content: "There are some tips.",
+  },
+  {
+    title: "Paid Tips on Development",
+    content: "There are some tips.",
+  },
+];
+
 module.exports = { users };
