@@ -7,6 +7,8 @@ https://www.npmjs.com/package/jsonwebtoken
 >> npm install nodemon -g
 >> nodemon -v
 2.0.22
+>> npm install nodemon --save-dev
+
 >> npm install express
 >> npm run start
 >> npm install express-validator
