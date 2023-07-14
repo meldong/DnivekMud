@@ -17,6 +17,11 @@ app.get("/", (req, res) => {
   res.send("Hi, I am Dnivek!");
 });
 
+app.get("*", (req, res) => {
+  logger.info("Route undefined!");
+  res.send("App works!");
+});
+
 app.listen(port, () => {
   logger.info(`Now running on port ${port}!`);
 });
