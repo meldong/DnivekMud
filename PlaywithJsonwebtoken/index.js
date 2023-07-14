@@ -2,6 +2,7 @@ const express = require("express");
 const auth = require("./routes/auth");
 const post = require("./routes/post");
 const user = require("./routes/user");
+const logger = require("./logger/logger");
 
 const app = express();
 const port = 3000;
@@ -17,5 +18,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Now running on port ${port}!`);
+  logger.info(`Now running on port ${port}!`);
 });
