@@ -15,9 +15,13 @@ https://www.npmjs.com/package/jsonwebtoken
 
 >> npm install eslint -g
 >> npm install eslint --save-dev
+>> npm run eslint
+>> npm run eslint-fix
 
 >> npm install webpack -g
 >> npm install webpack webpack-cli --save-dev
+>> npm run build
+>> npm run prod
 
 >> npm config rm proxy
 >> npm config rm https-proxy
