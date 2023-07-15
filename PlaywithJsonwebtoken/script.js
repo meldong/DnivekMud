@@ -10,7 +10,7 @@ console.log(decoded.foo); // bar
 
 // invalid token - synchronous
 try {
-  var decoded = jwt.verify(token, "wrong-secret");
+  decoded = jwt.verify(token, "wrong-secret");
 } catch (err) {
   console.error(err);
 }

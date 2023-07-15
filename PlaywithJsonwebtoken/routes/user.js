@@ -1,5 +1,5 @@
 const router = require("express").Router();
-logger = require("../logger/logger");
+const logger = require("../logger/logger");
 
 const users = [{ firstName: "fnam1", lastName: "lnam1", userName: "uname1" }];
 
