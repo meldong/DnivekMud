@@ -1,7 +1,7 @@
 const express = require("express");
 const auth = require("./routes/auth");
 const post = require("./routes/post");
-const routes = require("./routes/routes");
+const api = require("./routes/api");
 const logger = require("./logger/logger");
 
 const app = express();
@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use("/auth", auth);
 app.use("/posts", post);
-app.use("/api", routes);
+app.use("/api", api);
 
 app.get("/", (req, res) => {
   res.send("Hi, I am Dnivek!");
