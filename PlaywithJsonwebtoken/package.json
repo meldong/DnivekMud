@@ -7,6 +7,7 @@
     "serve": "node index.js",
     "start": "nodemon index.js",
     "build": "webpack",
+    "prod": "node dist/api.bundle.js",
     "eslint": "eslint ./",
     "eslint-fix": "eslint ./ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
