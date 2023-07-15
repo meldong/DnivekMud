@@ -1,0 +1,48 @@
+Created on      Jul 15, 2023
+Last updated on Jul 15, 2023
+
+Node.js project
+================================================================================
+project structure for a Node.js project to make code modular and maintainable
+================================================================================
+project/
+├── config/
+│   ├── config.js
+│   ├── db.js
+│   └── env.js
+├── controllers/
+│   ├── userController.js
+│   └── ...
+├── models/
+│   ├── userModel.js
+│   └── ...
+├── routes/
+│   ├── userRoutes.js
+│   └── ...
+├── services/
+│   ├── authService.js
+│   └── ...
+├── tests/
+│   ├── auth.test.js
+│   └── ...
+├── utils/
+│   ├── errorHandler.js
+│   ├── logger.js
+│   └── ...
+├── index.js
+├── package.json
+├── README.md
+└── .env
+
+In this project structure, you have separate directories for different components of your application:
+
+* config: Contains configuration files for your application, such as database configuration, environment variables, etc.
+* controllers: Contains controller functions that handle incoming requests and send back responses.
+* models: Contains database models that define the structure of your data and provide an interface for querying the database.
+* routes: Contains route definitions that map incoming requests to the appropriate controller function.
+* services: Contains business logic that interacts with the database and provides functionality to the controllers.
+* tests: Contains automated tests for your application.
+* utils: Contains utility functions that can be used throughout your application.
+* index.js: The entry point of your application that starts the server and sets up the necessary middleware.
+* package.json: Contains the dependencies and scripts for your application.
+* README.md: Contains documentation for your application.
