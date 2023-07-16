@@ -48,7 +48,8 @@ In this project structure, you have separate directories for different component
 * README.md: Contains documentation for your application.
 
 ================================================================================
-
+template
 ================================================================================
 >> npm init -y
 >> npm install express
+>> npm install nodemon --save-dev
