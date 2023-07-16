@@ -46,3 +46,9 @@ In this project structure, you have separate directories for different component
 * index.js: The entry point of your application that starts the server and sets up the necessary middleware.
 * package.json: Contains the dependencies and scripts for your application.
 * README.md: Contains documentation for your application.
+
+================================================================================
+
+================================================================================
+>> npm init -y
+>> npm install express

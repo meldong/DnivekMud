@@ -1,0 +1,10 @@
+================================================================================
+7 Free Public APIs you will love as a developer💖
+================================================================================
+https://jsonplaceholder.typicode.com/
+https://cloud.google.com/translate/docs/
+https://openweathermap.org/api
+https://restcountries.com/
+https://ipapi.co/json
+https://random-data-api.com/
+https://pokeapi.co/
