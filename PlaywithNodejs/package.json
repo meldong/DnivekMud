@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build": "webpack",
+    "prod": "node dist/api.bundle.js",
     "eslint": "eslint ./",
     "eslint-fix": "eslint ./ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +20,8 @@
   },
   "devDependencies": {
     "eslint": "^8.45.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
   }
 }
