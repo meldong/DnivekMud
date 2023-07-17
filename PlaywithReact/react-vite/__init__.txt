@@ -5,3 +5,5 @@
 
 rafce to create new component
 
+>> npm install -D tailwindcss postcss autoprefixer
+>> 
