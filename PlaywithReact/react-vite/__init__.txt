@@ -1,9 +1,11 @@
 >> node -v
-18.16.0
+16.16.0
+
+https://tailwindcss.com/docs/guides/vite#react
 
 >> npm create vite@latest
+>> npm install -D tailwindcss postcss autoprefixer
+>> npx tailwindcss init -p
 
 rafce to create new component
 
->> npm install -D tailwindcss postcss autoprefixer
->> 
