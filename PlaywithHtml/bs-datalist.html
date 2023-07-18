@@ -15,59 +15,96 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <label for="exampleDataList" class="form-label">Datalist example</label>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-    <datalist id="datalistOptions">
-        <option value="San Francisco">
-        <option value="New York">
-        <option value="Seattle">
-        <option value="Los Angeles">
-        <option value="Chicago">
-    </datalist>
+    <div class="container">
+        <h2>The datalist element</h2>
+        <!-- basic form -->
+        <form>
+            <div class="form-group">
+                <label for="exampleDataList">Datalist example</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="San Francisco">
+                    <option value="New York">
+                    <option value="Seattle">
+                    <option value="Los Angeles">
+                    <option value="Chicago">
+                </datalist>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <p><strong>Note:</strong> The datalist tag is not supported in Safari 12.0 (or earlier).</p>
 
-    <label for="ice-cream-choice">Choose a flavor:</label>
-    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+        <!-- https://www.w3schools.com/tags/tag_datalist.asp -->
+        <div style="padding:24px;background-color:aquamarine;">
+            <h1>The datalist element</h1>
+            <form action="/action_page.php" method="get">
+                <label for="browser">Choose your browser from the list:</label>
+                <input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+                <input type="submit">
+            </form>
+            <p><strong>Note:</strong> The datalist tag is not supported in Safari 12.0 (or earlier).</p>
+        </div>
 
-    <datalist id="ice-cream-flavors">
-        <option value="Chocolate">
-        <option value="Coconut">
-        <option value="Mint">
-        <option value="Strawberry">
-        <option value="Vanilla">
-    </datalist>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist -->
+        <div style="padding:24px;background-color: #eeeeee;">
+            <label for=" ice-cream-choice">Choose a flavor:</label>
+            <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+            <datalist id="ice-cream-flavors">
+                <option value="Chocolate">
+                <option value="Coconut">
+                <option value="Mint">
+                <option value="Strawberry">
+                <option value="Vanilla">
+            </datalist>
+        </div>
 
-    <label for="myBrowser">Choose a browser from this list:</label>
-    <input list="browsers" id="myBrowser" name="myBrowser" />
-    <datalist id="browsers">
-        <option value="Chrome"></option>
-        <option value="Firefox"></option>
-        <option value="Opera"></option>
-        <option value="Safari"></option>
-        <option value="Microsoft Edge"></option>
-    </datalist>
+        <div style="padding:24px;background-color: #eeeeee;">
+            <label for=" myBrowser">Choose a browser from this list:</label>
+            <input list="browsers" id="myBrowser" name="myBrowser" />
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+                <option value="Microsoft Edge"></option>
+            </datalist>
+        </div>
 
-    <input type="time" list="popularHours" />
-    <datalist id="popularHours">
-        <option value="12:00"></option>
-        <option value="13:00"></option>
-        <option value="14:00"></option>
-    </datalist>
+        <div style="padding:24px;background-color:aquamarine;">
+            <input type="time" list="popularHours" />
+            <datalist id="popularHours">
+                <option value="12:00"></option>
+                <option value="13:00"></option>
+                <option value="14:00"></option>
+            </datalist>
+        </div>
 
-    <label for="colors">Pick a color (preferably a red tone):</label>
-    <input type="color" list="redColors" id="colors" />
-    <datalist id="redColors">
-        <option value="#800000"></option>
-        <option value="#8B0000"></option>
-        <option value="#A52A2A"></option>
-        <option value="#DC143C"></option>
-    </datalist>
+        <div style="padding:24px;background-color: #eeeeee;">
+            <label for=" colors">Pick a color (preferably a red tone):</label>
+            <input type="color" list="redColors" id="colors" />
+            <datalist id="redColors">
+                <option value="#800000"></option>
+                <option value="#8B0000"></option>
+                <option value="#A52A2A"></option>
+                <option value="#DC143C"></option>
+            </datalist>
+        </div>
 
-    <label for="pwd">Enter a password:</label>
-    <input type="password" list="randomPassword" id="pwd" />
-    <datalist id="randomPassword">
-        <option value="5Mg[_3DnkgSu@!q#"></option>
-    </datalist>
+        <div style="padding:24px;background-color:aquamarine;">
+            <label for="pwd">Enter a password:</label>
+            <input type="password" list="randomPassword" id="pwd" />
+            <datalist id="randomPassword">
+                <option value="5Mg[_3DnkgSu@!q#"></option>
+            </datalist>
+        </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
