@@ -3,7 +3,7 @@
     <Appbar />
     <!-- <Navbar /> -->
     <hello-world />
-    <Footer></Footer>
+    <Footer />
   </div>
 </template>
 

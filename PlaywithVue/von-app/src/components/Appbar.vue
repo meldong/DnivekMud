@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h6"> COLLAB </v-list-item-title>
+          <v-list-item-title class="text-h6"> VON </v-list-item-title>
           <v-list-item-subtitle> Since Jun 13, 2023 </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>

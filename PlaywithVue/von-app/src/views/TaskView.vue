@@ -1,5 +1,6 @@
 <template>
   <div class="task pa-6">
+    <Appbar />
     <h1>Task</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit harum
@@ -44,12 +45,23 @@
         <v-divider></v-divider>
       </div>
     </v-list>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Appbar from "../components/Appbar";
+
 export default {
   name: "Task",
+
+  components: {
+    Navbar,
+    Footer,
+    Appbar,
+  },
 
   data: () => ({
     newTaskTitle: "",
