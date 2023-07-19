@@ -1,7 +1,7 @@
 <template>
   <div class="home grey lighten-4">
-    <!-- <Navbar /> -->
     <Appbar />
+    <!-- <Navbar /> -->
     <hello-world />
     <Footer></Footer>
   </div>
