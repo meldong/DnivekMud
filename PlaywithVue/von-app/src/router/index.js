@@ -24,6 +24,11 @@ const routes = [
     name: "task",
     component: () => import("../views/TaskView.vue"),
   },
+  {
+    path: "/bom",
+    name: "bom",
+    component: () => import("../components/BomCompare.vue"),
+  },
 ];
 
 const router = new VueRouter({
