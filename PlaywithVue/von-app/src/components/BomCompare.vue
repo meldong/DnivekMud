@@ -41,9 +41,9 @@
               </v-layout>
             </v-card-text>
             <v-tabs v-model="tab" dark background-color="primary">
-              <v-tab>Input</v-tab>
+              <v-tab>Raw</v-tab>
               <v-tab>BOM</v-tab>
-              <v-tab>different</v-tab>
+              <v-tab>Difference</v-tab>
               <v-tab-item>
                 <v-textarea
                   hide-details
@@ -51,6 +51,7 @@
                   v-model="leftBomInText"
                 ></v-textarea>
               </v-tab-item>
+
               <v-tab-item>
                 <div v-for="node in leftTree" :key="node.id">
                   <v-container grid-list-lg pl-0>
@@ -58,6 +59,7 @@
                   </v-container>
                 </div>
               </v-tab-item>
+
               <v-tab-item>
                 <pre style="overflow: hidden !important"><span
     :class="(item.added ? 'add_L' :item.removed ? 'delete_L' :'')"
@@ -82,9 +84,9 @@
               </v-layout>
             </v-card-text>
             <v-tabs v-model="tab" dark background-color="primary">
-              <v-tab>Input</v-tab>
+              <v-tab>Raw</v-tab>
               <v-tab>BOM</v-tab>
-              <v-tab>different</v-tab>
+              <v-tab>Difference</v-tab>
               <v-tab-item>
                 <v-textarea
                   hide-details
@@ -92,6 +94,7 @@
                   v-model="rightBomInText"
                 ></v-textarea>
               </v-tab-item>
+
               <v-tab-item>
                 <div v-for="node in rightTree" :key="node.id">
                   <v-container grid-list-lg>
@@ -99,6 +102,7 @@
                   </v-container>
                 </div>
               </v-tab-item>
+
               <v-tab-item>
                 <pre style="overflow: hidden !important"><span
     :class="(item.added ? 'add_R' :item.removed ? 'delete_R' :'')"
