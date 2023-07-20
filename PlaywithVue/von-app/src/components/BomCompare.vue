@@ -1,9 +1,9 @@
 <template>
   <div class="bomcompare">
-    <v-toolbar app fixed clipped-left dark>
+    <v-toolbar app fixed clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase">
-        Motor BOM Compare Tools
+        Motor BOM Comparison Tool
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -40,7 +40,7 @@
                 <!-- <v-btn @click="FindPN('left')">FIND</v-btn> -->
               </v-layout>
             </v-card-text>
-            <v-tabs v-model="tab" dark>
+            <v-tabs v-model="tab" dark background-color="primary">
               <v-tab>Input</v-tab>
               <v-tab>BOM</v-tab>
               <v-tab>different</v-tab>
@@ -81,7 +81,7 @@
                 <!-- <v-btn @click="FindPN('right')">FIND</v-btn> -->
               </v-layout>
             </v-card-text>
-            <v-tabs v-model="tab" dark>
+            <v-tabs v-model="tab" dark background-color="primary">
               <v-tab>Input</v-tab>
               <v-tab>BOM</v-tab>
               <v-tab>different</v-tab>
