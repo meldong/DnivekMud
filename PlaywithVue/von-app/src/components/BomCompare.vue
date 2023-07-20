@@ -25,7 +25,7 @@
       </v-container>
     </v-navigation-drawer>
 
-    <v-container fluid grid-list-lg class="grey lighten-2">
+    <v-container fluid grid-list-lg class="pa-6">
       <v-layout row wrap>
         <v-flex xs6>
           <v-card>
@@ -41,9 +41,9 @@
               </v-layout>
             </v-card-text>
             <v-tabs v-model="tab" dark background-color="primary">
-              <v-tab>Raw</v-tab>
-              <v-tab>BOM</v-tab>
-              <v-tab>Difference</v-tab>
+              <v-tab class="text-uppercase">Raw</v-tab>
+              <v-tab class="text-uppercase">BOM</v-tab>
+              <v-tab class="text-uppercase">Difference</v-tab>
               <v-tab-item>
                 <v-textarea
                   hide-details
@@ -84,9 +84,9 @@
               </v-layout>
             </v-card-text>
             <v-tabs v-model="tab" dark background-color="primary">
-              <v-tab>Raw</v-tab>
-              <v-tab>BOM</v-tab>
-              <v-tab>Difference</v-tab>
+              <v-tab class="text-uppercase">Raw</v-tab>
+              <v-tab class="text-uppercase">BOM</v-tab>
+              <v-tab class="text-uppercase">Difference</v-tab>
               <v-tab-item>
                 <v-textarea
                   hide-details
