@@ -7,6 +7,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "bom",
+    component: () => import("../components/BomCompare.vue"),
+  },
+  {
+    path: "/home",
     name: "home",
     component: HomeView,
   },

@@ -9,8 +9,8 @@
             @click="showChild = !showChild"
             v-if="Object.keys(data.child).length != 0"
           >
-            <v-icon v-if="!showChild">add</v-icon>
-            <v-icon v-else>remove</v-icon>
+            <v-icon v-if="!showChild">mdi-plus</v-icon>
+            <v-icon v-else>mdi-minus</v-icon>
           </v-btn>
         </v-scroll-y-transition>
       </v-flex>
@@ -26,7 +26,7 @@
           v-if="index + 1 == level"
           x-large
           :color="arrowColor"
-          >subdirectory_arrow_right</v-icon
+          >mdi-subdirectory-arrow-right</v-icon
         >
       </v-flex>
       <v-flex xs2 class="bomPN">
