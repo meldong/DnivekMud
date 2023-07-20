@@ -25,94 +25,93 @@
       </v-container>
     </v-navigation-drawer>
 
-    <v-content>
-      <v-container fluid grid-list-lg>
-        <v-layout row wrap>
-          <v-flex xs6>
-            <v-card>
-              <v-card-text>
-                <v-layout>
-                  <v-autocomplete
-                    v-model="leftPN"
-                    :items="pnList"
-                    label="Part Number"
-                    @input="FindPN('left')"
-                  ></v-autocomplete>
-                  <!-- <v-btn @click="FindPN('left')">FIND</v-btn> -->
-                </v-layout>
-              </v-card-text>
-              <v-tabs v-model="tab" dark>
-                <v-tab>Input</v-tab>
-                <v-tab>BOM</v-tab>
-                <v-tab>different</v-tab>
-                <v-tab-item>
-                  <v-textarea
-                    hide-details
-                    flat
-                    v-model="leftBomInText"
-                  ></v-textarea>
-                </v-tab-item>
-                <v-tab-item>
-                  <div v-for="node in leftTree" :key="node.id">
-                    <v-container grid-list-lg pl-0>
-                      <BOMnode :data="node" :level="0"></BOMnode>
-                    </v-container>
-                  </div>
-                </v-tab-item>
-                <v-tab-item>
-                  <pre style="overflow: hidden !important"><span
+    <v-container fluid grid-list-lg class="grey lighten-2">
+      <v-layout row wrap>
+        <v-flex xs6>
+          <v-card>
+            <v-card-text>
+              <v-layout>
+                <v-autocomplete
+                  v-model="leftPN"
+                  :items="pnList"
+                  label="Part Number"
+                  @input="FindPN('left')"
+                ></v-autocomplete>
+                <!-- <v-btn @click="FindPN('left')">FIND</v-btn> -->
+              </v-layout>
+            </v-card-text>
+            <v-tabs v-model="tab" dark>
+              <v-tab>Input</v-tab>
+              <v-tab>BOM</v-tab>
+              <v-tab>different</v-tab>
+              <v-tab-item>
+                <v-textarea
+                  hide-details
+                  flat
+                  v-model="leftBomInText"
+                ></v-textarea>
+              </v-tab-item>
+              <v-tab-item>
+                <div v-for="node in leftTree" :key="node.id">
+                  <v-container grid-list-lg pl-0>
+                    <BOMnode :data="node" :level="0"></BOMnode>
+                  </v-container>
+                </div>
+              </v-tab-item>
+              <v-tab-item>
+                <pre style="overflow: hidden !important"><span
     :class="(item.added ? 'add_L' :item.removed ? 'delete_L' :'')"
     v-for="item in BOMdiff"
     :key="item.id"
   >{{ item.value }}</span></pre>
-                </v-tab-item>
-              </v-tabs>
-            </v-card>
-          </v-flex>
-          <v-flex xs6>
-            <v-card>
-              <v-card-text>
-                <v-layout>
-                  <v-autocomplete
-                    v-model="rightPN"
-                    :items="pnList"
-                    label="Part Number"
-                    @input="FindPN('right')"
-                  ></v-autocomplete>
-                  <!-- <v-btn @click="FindPN('right')">FIND</v-btn> -->
-                </v-layout>
-              </v-card-text>
-              <v-tabs v-model="tab" dark>
-                <v-tab>Input</v-tab>
-                <v-tab>BOM</v-tab>
-                <v-tab>different</v-tab>
-                <v-tab-item>
-                  <v-textarea
-                    hide-details
-                    flat
-                    v-model="rightBomInText"
-                  ></v-textarea>
-                </v-tab-item>
-                <v-tab-item>
-                  <div v-for="node in rightTree" :key="node.id">
-                    <v-container grid-list-lg>
-                      <BOMnode :data="node" :level="0"></BOMnode>
-                    </v-container>
-                  </div>
-                </v-tab-item>
-                <v-tab-item>
-                  <pre style="overflow: hidden !important"><span
+              </v-tab-item>
+            </v-tabs>
+          </v-card>
+        </v-flex>
+        <v-flex xs6>
+          <v-card>
+            <v-card-text>
+              <v-layout>
+                <v-autocomplete
+                  v-model="rightPN"
+                  :items="pnList"
+                  label="Part Number"
+                  @input="FindPN('right')"
+                ></v-autocomplete>
+                <!-- <v-btn @click="FindPN('right')">FIND</v-btn> -->
+              </v-layout>
+            </v-card-text>
+            <v-tabs v-model="tab" dark>
+              <v-tab>Input</v-tab>
+              <v-tab>BOM</v-tab>
+              <v-tab>different</v-tab>
+              <v-tab-item>
+                <v-textarea
+                  hide-details
+                  flat
+                  v-model="rightBomInText"
+                ></v-textarea>
+              </v-tab-item>
+              <v-tab-item>
+                <div v-for="node in rightTree" :key="node.id">
+                  <v-container grid-list-lg>
+                    <BOMnode :data="node" :level="0"></BOMnode>
+                  </v-container>
+                </div>
+              </v-tab-item>
+              <v-tab-item>
+                <pre style="overflow: hidden !important"><span
     :class="(item.added ? 'add_R' :item.removed ? 'delete_R' :'')"
     v-for="item in BOMdiff"
     :key="item.id"
   >{{ item.value }}</span></pre>
-                </v-tab-item>
-              </v-tabs>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
+              </v-tab-item>
+            </v-tabs>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
     <v-footer app></v-footer>
   </div>
 </template>
