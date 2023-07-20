@@ -3,7 +3,7 @@
     <v-toolbar app fixed clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase">
-        Motor BOM Comparison Tool
+        BOM Comparison Tool
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -49,6 +49,8 @@
                   hide-details
                   flat
                   v-model="leftBomInText"
+                  auto-grow
+                  class="px-4"
                 ></v-textarea>
               </v-tab-item>
 
@@ -92,6 +94,8 @@
                   hide-details
                   flat
                   v-model="rightBomInText"
+                  auto-grow
+                  class="px-4"
                 ></v-textarea>
               </v-tab-item>
 
