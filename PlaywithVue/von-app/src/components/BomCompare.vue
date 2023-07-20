@@ -1,15 +1,18 @@
 <template>
   <div class="bomcompare">
     <v-toolbar app fixed clipped-left dark>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Motor BOM Compare Tools</v-toolbar-title>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title class="text-uppercase">
+        Motor BOM Compare Tools
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat @click="diffMode = 'Chars'">Chars</v-btn>
-        <v-btn flat @click="diffMode = 'Words'">Words</v-btn>
-        <v-btn flat @click="diffMode = 'Lines'">Lines</v-btn>
+        <v-btn plain @click="diffMode = 'Chars'">Chars</v-btn>
+        <v-btn plain @click="diffMode = 'Words'">Words</v-btn>
+        <v-btn plain @click="diffMode = 'Lines'">Lines</v-btn>
       </v-toolbar-items>
     </v-toolbar>
+
     <v-navigation-drawer
       v-model="drawer"
       clipped
@@ -21,6 +24,7 @@
         <v-switch v-model="showDes" label="show parts description"></v-switch>
       </v-container>
     </v-navigation-drawer>
+
     <v-content>
       <v-container fluid grid-list-lg>
         <v-layout row wrap>
