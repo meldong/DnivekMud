@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div class="bomcompare">
     <v-toolbar app fixed clipped-left dark>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Motor BOM Compare Tools</v-toolbar-title>
@@ -110,7 +110,7 @@
       </v-container>
     </v-content>
     <v-footer app></v-footer>
-  </v-app>
+  </div>
 </template>
 
 <script>
