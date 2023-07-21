@@ -49,15 +49,6 @@ const logName = (name, index) => {
 };
 names.forEach(logName);
 
-let html = ``;
-names.forEach((name, index) => {
-  html += `<li id='${index}'>${name}</li>`;
-});
-console.log(html);
-
-const ul = document.querySelector(".names");
-ul.innerHTML = html;
-
 // =============================================================================
 // objects
 // =============================================================================
@@ -109,5 +100,26 @@ userOne.age = 40;
 console.log(userOne, userTwo);
 
 // =============================================================================
-// document object model
+// Document Object Model (DOM) to interact with browser
 // =============================================================================
+console.log(document);
+
+const para = document.querySelector("p.error");
+console.log(para.outerHTML);
+
+const paras = document.querySelectorAll("p");
+paras.forEach((para, index) => console.log("in loop:", index, para.outerHTML));
+
+const errors = document.querySelectorAll(".error");
+errors.forEach((error, index) =>
+  console.log("in loop:", index, error.outerHTML)
+);
+
+let html = ``;
+names.forEach((name, index) => {
+  html += `<li id='${index}'>${name}</li>`;
+});
+console.log(html);
+
+const ul = document.querySelector(".names");
+ul.innerHTML = html;
