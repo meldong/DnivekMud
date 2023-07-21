@@ -95,3 +95,15 @@ user.logBlogs();
 
 // Math object
 console.log(Math);
+
+// primitive values stored in stack
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+scoreOne = 40;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+
+// reference values stored in heap
+const userOne = { name: "ryu", age: 30 };
+const userTwo = userOne;
+userOne.age = 40;
+console.log(userOne, userTwo);
