@@ -107,3 +107,7 @@ const userOne = { name: "ryu", age: 30 };
 const userTwo = userOne;
 userOne.age = 40;
 console.log(userOne, userTwo);
+
+// =============================================================================
+// document object model
+// =============================================================================
