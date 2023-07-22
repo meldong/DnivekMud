@@ -115,11 +115,48 @@ errors.forEach((error, index) =>
   console.log("in loop:", index, error.outerHTML)
 );
 
+// get element by id
+const title = document.getElementById("pageTitle");
+console.log(title.outerHTML);
+
+// get element by class name
+const errorsTwo = document.getElementsByClassName("error");
+console.log(errors, errorsTwo);
+
+// get element by tag name
+const parasTwo = document.getElementsByTagName("p");
+console.log(paras, parasTwo);
+
 let html = ``;
 names.forEach((name, index) => {
   html += `<li id='${index}'>${name}</li>`;
+  console.log(html);
 });
-console.log(html);
 
 const ul = document.querySelector(".names");
 ul.innerHTML = html;
+
+const link = document.querySelector("a");
+console.log(link.getAttribute("href"));
+link.setAttribute("href", "https://google.com");
+link.innerText = "Link to google.com";
+
+const titleTwo = document.querySelector("h2");
+console.log(titleTwo.style.color);
+titleTwo.style.backgroundColor = "aquamarine";
+titleTwo.style.color = "crimson";
+titleTwo.style.fontSize = "32px";
+
+const content = document.querySelector("div.error");
+console.log(content.classList);
+content.classList.remove("error");
+content.classList.add("success");
+content.innerText = "this is a success message";
+
+const titleThree = document.querySelector(".title");
+titleThree.classList.toggle("test");
+console.log(titleThree.classList);
+titleThree.classList.toggle("test");
+console.log(titleThree.classList);
+titleThree.classList.toggle("test");
+console.log(titleThree.classList);

@@ -5,20 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sandbox</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-    <h2>The DOM</h2>
+    <h2 id="pageTitle" class="title" style="color:orange">The DOM</h2>
+    <a href="https://example.com">Link to example domain</a>
     <div>
         <p>hello world</p>
         <p>lorem ipsum</p>
         <p class="error">this is an error message</p>
     </div>
     <div class="error">this is another error message</div>
+    <div class="content">
+        <p>this is the content</p>
+        <ul class="names"></ul>
+    </div>
 
-    <h4>Sandbox</h4>
-    <ul class="names"></ul>
     <script src="sandbox.js"></script>
 </body>
 
