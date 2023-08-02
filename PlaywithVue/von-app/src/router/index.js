@@ -44,6 +44,11 @@ const routes = [
     name: "bom",
     component: () => import("../components/BomCompare.vue"),
   },
+  {
+    path: "/tmp",
+    name: "tmp",
+    component: () => import("../components/Guideline.vue"),
+  },
 ];
 
 const router = new VueRouter({
