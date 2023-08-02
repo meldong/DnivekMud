@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld";
 import Appbar from "../components/Appbar";
 import Navbar from "../components/Navbar";
 import Foobar from "../components/Footer";
