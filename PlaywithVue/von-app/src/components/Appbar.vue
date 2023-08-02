@@ -55,6 +55,7 @@ export default {
       { title: "Tasks", icon: "mdi-list-box", to: "/task" },
       { title: "Users", icon: "mdi-account-group", to: "/user" },
       { title: "Dnivek", icon: "mdi-omega", to: "/dnivek" },
+      { title: "Data Manager", icon: "mdi-api", to: "/api" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
   }),
