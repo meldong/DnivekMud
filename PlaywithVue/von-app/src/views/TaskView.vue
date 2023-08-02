@@ -45,22 +45,22 @@
         <v-divider></v-divider>
       </div>
     </v-list>
-    <Footer />
+    <Foobar />
   </div>
 </template>
 
 <script>
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Appbar from "../components/Appbar";
+import Navbar from "../components/Navbar";
+import Foobar from "../components/Footer";
 
 export default {
   name: "Task",
 
   components: {
-    Navbar,
-    Footer,
     Appbar,
+    Navbar,
+    Foobar,
   },
 
   data: () => ({

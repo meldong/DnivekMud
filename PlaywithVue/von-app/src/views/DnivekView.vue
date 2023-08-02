@@ -3,24 +3,24 @@
     <Appbar />
     <!-- <Navbar /> -->
     <hello-world />
-    <Footer />
+    <Foobar />
   </div>
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Appbar from "../components/Appbar";
+import Navbar from "../components/Navbar";
+import Foobar from "../components/Footer";
+import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Dnivek",
 
   components: {
-    HelloWorld,
-    Navbar,
-    Footer,
     Appbar,
+    Navbar,
+    Foobar,
+    HelloWorld,
   },
 };
 </script>
