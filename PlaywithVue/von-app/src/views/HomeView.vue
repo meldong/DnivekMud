@@ -2,31 +2,24 @@
   <div class="home grey lighten-4">
     <Appbar />
     <!-- <Navbar /> -->
-    <!-- <hello-world /> -->
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ducimus?
-      Explicabo ratione, consectetur culpa aspernatur tempora beatae? Alias ad
-      obcaecati, impedit ea, nostrum, sint commodi esse vero molestias repellat
-      velit!
-    </p>
-    <Footer />
+    <p>Welcome!</p>
+    <Foobar />
   </div>
 </template>
 
 <script>
 import HelloWorld from "../components/HelloWorld";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Appbar from "../components/Appbar";
+import Navbar from "../components/Navbar";
+import Foobar from "../components/Footer";
 
 export default {
   name: "Home",
 
   components: {
-    HelloWorld,
-    Navbar,
-    Footer,
     Appbar,
+    Navbar,
+    Foobar,
   },
 };
 </script>
