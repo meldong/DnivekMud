@@ -50,7 +50,11 @@ export default {
     // https://pictogrammers.com/library/mdi/
     items: [
       { title: "Home", icon: "mdi-home", to: "/" },
-      { title: "Apps", icon: "mdi-view-dashboard", to: "/task" },
+      { title: "Dashboard", icon: "mdi-view-dashboard", to: "/dashboard" },
+      { title: "BOM Comparison Tool", icon: "mdi-compare", to: "/bom" },
+      { title: "Tasks", icon: "mdi-list-box", to: "/task" },
+      { title: "Users", icon: "mdi-account-group", to: "/user" },
+      { title: "Dnivek", icon: "mdi-omega", to: "/dnivek" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
   }),

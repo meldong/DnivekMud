@@ -7,11 +7,6 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "bom",
-    component: () => import("../components/BomCompare.vue"),
-  },
-  {
-    path: "/home",
     name: "home",
     component: HomeView,
   },
@@ -25,9 +20,19 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
+    path: "/dnivek",
+    name: "dnivek",
+    component: () => import("../views/DnivekView.vue"),
+  },
+  {
     path: "/task",
     name: "task",
     component: () => import("../views/TaskView.vue"),
+  },
+  {
+    path: "/user",
+    name: "user",
+    component: () => import("../views/UserView.vue"),
   },
   {
     path: "/bom",

@@ -1,14 +1,8 @@
 <template>
-  <div class="home grey lighten-4">
+  <div class="dnivek grey lighten-4">
     <Appbar />
     <!-- <Navbar /> -->
-    <!-- <hello-world /> -->
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ducimus?
-      Explicabo ratione, consectetur culpa aspernatur tempora beatae? Alias ad
-      obcaecati, impedit ea, nostrum, sint commodi esse vero molestias repellat
-      velit!
-    </p>
+    <hello-world />
     <Footer />
   </div>
 </template>
@@ -20,7 +14,7 @@ import Footer from "../components/Footer";
 import Appbar from "../components/Appbar";
 
 export default {
-  name: "Home",
+  name: "Dnivek",
 
   components: {
     HelloWorld,
