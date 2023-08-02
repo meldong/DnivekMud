@@ -3,12 +3,10 @@
     <v-layout row wrap>
       <v-flex xs3>
         <v-stepper v-model="e6" vertical non-linear>
-          <v-stepper-step step="1" editable>Select Motor type</v-stepper-step>
-          <v-stepper-step step="2" editable
-            >Select Motion Profile</v-stepper-step
-          >
-          <v-stepper-step step="3" editable>Select Motor</v-stepper-step>
-          <v-stepper-step step="4" editable>Calculate</v-stepper-step>
+          <v-stepper-step step="1" editable>Motor Type</v-stepper-step>
+          <v-stepper-step step="2" editable>Motion Profile</v-stepper-step>
+          <v-stepper-step step="3" editable>Motor PN</v-stepper-step>
+          <v-stepper-step step="4" editable>Calculation</v-stepper-step>
           <v-stepper-step step="5" editable>Store Result</v-stepper-step>
           <v-stepper-step step="6" editable>Store Progress</v-stepper-step>
         </v-stepper>
@@ -140,34 +138,7 @@
                   A floating Button will show in the right bottom corner after
                   calculation
                 </p>
-                <!-- <div>
-                                      <v-speed-dial v-model="fab" direction="bottom" transition="scale-transition" absolute open-on-hover>
-                                          <v-btn slot="activator" v-model="fab" color="blue darken-2" dark fab>
-                                              <v-icon>settings</v-icon>
-                                              <v-icon>close</v-icon>
-                                          </v-btn>
-                                          <v-tooltip left>
-                                              <v-btn slot="activator" fab dark small color="green" @click="saveAsImage" @click.stop="dialog=true">
-                                                  <v-icon>photo_size_select_actual</v-icon>
-                                              </v-btn>
-                                              <span>Save All Raw Data</span>
-                                          </v-tooltip>
-                                          <v-tooltip left>
-                                              <v-btn slot="activator" fab dark small color="indigo" @click.stop="saveAsZip">
-                                                  <v-icon>save</v-icon>
-                                              </v-btn>
-                                              <span>Save result</span>
-                                          </v-tooltip>
-                                      </v-speed-dial>
-                  </div>-->
                 <div>
-                  <!-- <p>We provide 3 type of file:</p>
-                                      <v-btn slot="activator" fab dark small color="green">
-                                          <v-icon>photo_size_select_actual</v-icon>
-                                      </v-btn>
-                                      <span>Save All Raw Data</span>
-                    <p>The result will download as a single json</p>-->
-
                   <v-btn slot="activator" fab dark color="indigo">
                     <v-icon>mdi-content-save</v-icon>
                   </v-btn>
