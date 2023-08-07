@@ -146,7 +146,7 @@
       </v-card>
     </v-dialog>
     <v-snackbar v-model="snackbar">
-      "If you are first Time to Use the Tool, Click"
+      If you are first time to use the tool click
       <v-icon large dark>mdi-information</v-icon>
     </v-snackbar>
     <v-snackbar v-model="snackbarError" color="error">
@@ -163,6 +163,12 @@ import axios from "axios";
 var server = "http://athkmotor.ahkex.asmpt.com:8088/ms/api";
 
 export default {
+  name: "Motor",
+
+  components: {
+    Guideline,
+  },
+
   data: () => ({
     directionType: "Linear",
     connectionType: "AC3phase",
@@ -181,10 +187,6 @@ export default {
     motorType: function () {
       return this.connectionType + this.directionType;
     },
-  },
-
-  components: {
-    guideline,
   },
 
   mounted() {
@@ -232,7 +234,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .ieversion {
   display: none !important;
 }
