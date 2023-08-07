@@ -246,7 +246,7 @@ export default {
 <style scoped>
 .content {
   display: block;
-  height: 800px;
+  height: 420px;
   overflow-y: auto;
 }
 </style>

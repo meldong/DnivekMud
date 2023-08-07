@@ -45,9 +45,14 @@ const routes = [
     component: () => import("../components/BomCompare.vue"),
   },
   {
-    path: "/tmp",
-    name: "tmp",
+    path: "/comp",
+    name: "comp",
     component: () => import("../components/Guideline.vue"),
+  },
+  {
+    path: "/page",
+    name: "page",
+    component: () => import("../views/MotorView.vue"),
   },
 ];
 
