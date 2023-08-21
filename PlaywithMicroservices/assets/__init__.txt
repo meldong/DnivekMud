@@ -1,2 +1,12 @@
 https://faun.pub/lets-build-deploy-a-node-js-microservices-application-ad3bdfe11da6
 
+http://localhost:3002/about
+
+http://localhost:3002/distance/46776/61727
+{"distance":226.093}
+
+http://localhost:3002/distance/35004/86556
+{"distance":1299.338}
+
+https://www.zipcodeapi.com/rest/DemoOnly00n4AJOSSMfIMdMXCwaphXiz9xyjsw4eRzhVjkEAOks2KUqjim7VzpOW/distance.json/35004/86556/km
+https://www.zipcodeapi.com/rest/DemoOnly00n4AJOSSMfIMdMXCwaphXiz9xyjsw4eRzhVjkEAOks2KUqjim7VzpOW/distance.json/35004/86556/mile

@@ -2,7 +2,7 @@ var request = require("request");
 
 const apiKey =
   process.env.ZIPCODE_API_KEY ||
-  "DemoOnly00xM8GfwlIQE2Jf2FneBr1uZBPGCw3W8DzyZjKoPaVCRGamRCaclrpVR";
+  "DemoOnly00n4AJOSSMfIMdMXCwaphXiz9xyjsw4eRzhVjkEAOks2KUqjim7VzpOW";
 const zipCodeURL = "https://www.zipcodeapi.com/rest/";
 
 var distance = {
