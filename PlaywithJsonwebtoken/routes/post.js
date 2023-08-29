@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { publicPosts, privatePosts } = require("../db");
+const { publicPosts, privatePosts } = require("../models/db");
 const checkAuth = require("../middleware/checkAuth");
 
 router.get("/", (req, res) => {

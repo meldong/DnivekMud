@@ -46,3 +46,8 @@ registry = "https://registry.npmjs.org/"
 ; cwd = C:\Bin\visualstudio\DnivekMud\PlaywithJsonwebtoken
 ; HOME = C:\Users\aenldong
 ; Run `npm config ls -l` to show all defaults.
+
+
+https://medium.com/@maison.moa/using-jwt-json-web-tokens-to-authorize-users-and-protect-api-routes-3e04a1453c3e
+https://medium.com/@choubeyayush4/securing-node-js-applications-with-jwt-refresh-tokens-and-redis-80ffbb54285a
+https://medium.com/@techsuneel99/secure-login-and-registration-in-node-js-20ac65d2a247
