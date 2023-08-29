@@ -1,0 +1,23 @@
+Created on Aug 29, 2023
+
+https://medium.com/@techsuneel99/design-patterns-in-node-js-31211904903e
+
+Introduction to Design Patterns
+Design patterns are tried-and-true solutions to recurring problems that software developers encounter during their coding journey. They provide a structured approach to solving challenges and promote best practices in software architecture. By incorporating design patterns, developers can create more robust, maintainable, and extensible codebases.
+
+Why Design Patterns Matter in Node.js
+Node.js, known for its non-blocking event-driven architecture, presents unique challenges and opportunities in software design. Applying design patterns tailored to Node.js can lead to more efficient and optimized applications. Let’s explore some key design patterns that are particularly valuable in the Node.js ecosystem:
+
+Singleton Pattern
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. In Node.js, where modules can be cached and shared across the application, using the Singleton pattern can help manage resources effectively. For instance, a database connection pool can be implemented as a singleton to prevent resource wastage.
+
+Factory Pattern
+The Factory pattern offers a way to create objects without specifying the exact class of object that will be created. In a Node.js context, this can simplify object creation, especially when dealing with asynchronous operations such as reading files or making API calls. By abstracting object creation, the Factory pattern enhances code readability and reusability.
+
+Observer Pattern
+Node.js’s event-driven nature aligns well with the Observer pattern. This pattern involves a subject that maintains a list of its dependents, called observers, and notifies them of any state changes. In the context of Node.js, this can be leveraged to build event-driven systems, such as real-time applications and chat applications.
+
+
+
+
+
