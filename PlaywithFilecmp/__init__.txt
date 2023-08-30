@@ -1,0 +1,1 @@
+python fcmp.py 'msvcr100.dll' 'msvcr120.dll'
