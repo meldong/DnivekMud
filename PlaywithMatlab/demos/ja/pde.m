@@ -1,4 +1,0 @@
-% PDE  PDE ÉfÉÇä÷êî
-
-
-%   Copyright 1984-2006 The MathWorks, Inc.
