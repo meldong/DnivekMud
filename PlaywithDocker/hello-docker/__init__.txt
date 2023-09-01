@@ -1,3 +1,4 @@
-docker build -t hello-docker .
+docker build -t meldong/hello-docker .
 docker image ls
 docker run hello-docker
+docker push meldong/hello-docker:tagname
