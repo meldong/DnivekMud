@@ -1,0 +1,33 @@
+Created on Sep 5, 2023
+
+https://docs.docker.com/get-started/
+
+docker build -t getting-started .
+docker run -dp 127.0.0.1:3000:3000 getting-started
+docker ps
+docker build -t getting-started .
+docker run -dp 127.0.0.1:3000:3000 getting-started
+docker stop <the-container-id>
+docker rm <the-container-id>
+docker rm -f <the-container-id>
+docker run -dp 127.0.0.1:3000:3000 getting-started
+
+https://hub.docker.com/
+
+docker push meldong/getting-started:tagname
+
+docker push docker/getting-started
+The push refers to repository [docker.io/docker/getting-started]
+An image does not exist locally with the tag: docker/getting-started
+
+docker image ls
+docker login -u meldong
+docker tag getting-started meldong/getting-started
+docker push meldong/getting-started
+
+https://labs.play-with-docker.com/
+
+docker run -dp 0.0.0.0:3000:3000 meldong/getting-started
+
+docker.io/meldong/getting-started
+
