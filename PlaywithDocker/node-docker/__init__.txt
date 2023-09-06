@@ -1,0 +1,18 @@
+Created on Sep 1, 2023
+
+https://docs.docker.com/language/nodejs/
+
+
+cd [path to your node-docker directory]
+npm init -y
+npm install ronin-server ronin-mocks
+touch server.js
+
+node server.js
+
+curl --request POST \
+  --url http://localhost:8000/test \
+  --header 'content-type: application/json' \
+  --data '{"msg": "testing" }'
+
+curl http://localhost:8000/test

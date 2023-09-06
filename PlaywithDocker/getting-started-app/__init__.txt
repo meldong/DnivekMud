@@ -31,3 +31,22 @@ docker run -dp 0.0.0.0:3000:3000 meldong/getting-started
 
 docker.io/meldong/getting-started
 
+docker volume create todo-db
+docker run -dp 127.0.0.1:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
+docker ps
+docker rm -f <the-container-id>
+docker run -dp 127.0.0.1:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
+
+docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2023-09-06T07:51:43Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
