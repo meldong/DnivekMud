@@ -1,0 +1,6 @@
+click("1681886554083.png")
+click("1681886635088.png")
+wait("1681886669934.png")
+click()
+write("Hello World")
+sleep(10)
