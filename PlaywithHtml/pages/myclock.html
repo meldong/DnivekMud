@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mySite - dnivek</title>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Orbitron'>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .bg {
+            background-image: url("images/header.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .font-orbitron {
+            font-family: 'Orbitron';
+            font-size: 120px;
+            font-weight: bold;
+        }
+
+        .oceanblue {
+            color: #2B65EC;
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <label id="currentTime" class="font-orbitron oceanblue middle"></label>
+
+    <script type="text/javascript">
+        setInterval(myCallback, 1000);
+
+        function myCallback() {
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = now.getMonth() + 1;
+            let day = now.getDate();
+            let hh = now.getHours();
+            let mm = now.getMinutes();
+            let ss = now.getSeconds();
+
+            month = month > 9 ? month : '0' + month;
+            day = day > 9 ? day : '0' + day;
+            hh = hh > 9 ? hh : '0' + hh;
+            mm = mm > 9 ? mm : '0' + mm;
+            ss = ss > 9 ? ss : '0' + ss;
+
+            var currentTime = year + "-" + month + "-" + day + "  " + hh + ' : ' + mm + ' : ' + ss;
+
+            document.getElementById("currentTime").innerText = currentTime;
+        }
+    </script>
+</body>
+
+</html>
