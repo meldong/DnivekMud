@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- Apr 1, 2022 -->
+<!-- https://vuetifyjs.com/en/components/steppers/ -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Vuetify Stepper</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <!-- In order for your application to work properly, you must wrap it in a v-app component. -->
+            <!-- <v-navigation-drawer app></v-navigation-drawer> -->
+            <v-app-bar app class="cyan darken-1">
+                <v-app-title>
+                    <span class="text-h5 white--text">VEUTIFY STEPPER</span>
+                    <v-spacer></v-spacer>
+                </v-app-title>
+            </v-app-bar>
+            <!-- Sizes your content based upon application components -->
+            <v-main>
+                <!-- Provides the application the proper gutter -->
+                <v-container fluid>
+                    <!-- If using vue-router -->
+                    <router-view></router-view>
+                </v-container>
+
+                <v-stepper alt-labels>
+                    <v-stepper-header>
+                        <v-stepper-step step="3" complete>Ad type</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="4" complete>Ad style</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step :rules="[() => false]" step="5">Custom channels<small>Alert message</small>
+                        </v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="6">Get code</v-stepper-step>
+                    </v-stepper-header>
+                </v-stepper>
+
+                <!-- Provides the application the proper gutter -->
+                <v-container fluid>
+                    <!-- If using vue-router -->
+                    <router-view></router-view>
+                </v-container>
+
+                <v-stepper alt-labels>
+                    <v-stepper-header>
+                        <v-stepper-step step="3" complete>Ad type</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="4" complete>Ad style</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step :rules="[() => false]" step="5">Custom channels<small>Alert message</small>
+                        </v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="6">Get code</v-stepper-step>
+                    </v-stepper-header>
+                </v-stepper>
+
+                <!-- Provides the application the proper gutter -->
+                <v-container fluid>
+                    <!-- If using vue-router -->
+                    <router-view></router-view>
+                </v-container>
+
+                <v-stepper v-model="e1">
+                    <v-stepper-header>
+                        <v-stepper-step :complete="e1 > 1" step="1">Name of step 1</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step :complete="e1 > 2" step="2">Name of step 2</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="3">Name of step 3</v-stepper-step>
+                    </v-stepper-header>
+                    <v-stepper-items>
+                        <v-stepper-content step="1">
+                            <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>
+                            <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
+                            <v-btn text>Cancel</v-btn>
+                        </v-stepper-content>
+                        <v-stepper-content step="2">
+                            <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>
+                            <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
+                            <v-btn text>Cancel</v-btn>
+                        </v-stepper-content>
+                        <v-stepper-content step="3">
+                            <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>
+                            <v-btn color="primary" @click="e1 = 1">Continue</v-btn>
+                            <v-btn text>Cancel</v-btn>
+                        </v-stepper-content>
+                    </v-stepper-items>
+                </v-stepper>
+            </v-main>
+            <v-footer app class="cyan darken-1">Last modified by Dnivek</v-footer>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+        })
+    </script>
+
+    <script>
+        export default {
+            data() {
+                return {
+                    e1: 1,
+                }
+            },
+        }
+    </script>
+</body>
+
+</html>
