@@ -1,3 +1,5 @@
+// https://mongoosejs.com/docs/index.html
+
 // getting-started.js
 const mongoose = require("mongoose");
 
