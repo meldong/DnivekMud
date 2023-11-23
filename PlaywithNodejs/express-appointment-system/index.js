@@ -1,53 +1,27 @@
-const express = require("express");
-const app = express();
-const PORT = 3000;
+var express = require("express");
+var app = express();
 
-app.use(express.json());
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 
-const mongoose = require("mongoose");
-
-mongoose.connect("mongodb://localhost:27017/appointments", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+app.all("/secret", function (req, res, next) {
+  console.log("Accessing the secret section ...");
+  next(); // pass control to the next handler
 });
 
-const appointmentSchema = new mongoose.Schema({
-  clientName: String,
-  date: Date,
-  time: String,
+app.listen(3000, function () {
+  console.log("Example app listening on port 3000!");
 });
 
-const Appointment = mongoose.model("Appointment", appointmentSchema);
+var square = require("./square"); // Here we require() the name of the file without the (optional) .js file extension
+console.log("The area of a square with a width of 4 is " + square.area(4));
 
-app.get("/available-time", async (req, res) => {
-  try {
-    const availableTimeSlots = [
-      "9:00 AM",
-      "10:00 AM",
-      "11:00 AM",
-      "12:00 PM",
-      "1:00 PM",
-      "2:00 PM",
-      "3:00 PM",
-      "4:00 PM",
-      "5:00 PM",
-    ];
+setTimeout(function () {
+  console.log("First");
+}, 3000);
+console.log("Second");
 
-    // Fetch booked time slots from the database
-    const bookedTimeSlots = await Appointment.find({ date: req.query.date });
-
-    // Remove booked time slots from available ones
-    const filteredTimeSlots = availableTimeSlots.filter(
-      (slot) => !bookedTimeSlots.includes(slot)
-    );
-
-    res.json({ availableTimeSlots: filteredTimeSlots });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
+var wiki = require("./wiki.js");
+// ...
+app.use("/wiki", wiki);
