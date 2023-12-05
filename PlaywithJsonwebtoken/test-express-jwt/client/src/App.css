@@ -24,16 +24,17 @@
   color: teal;
   font-weight: bold;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-.textbox {
+.formInput {
   margin: 5px;
   padding: 10px;
   border: 1px solid teal;
+  caret-color: teal;
 }
 
-.textbox:focus {
+.formInput:focus {
   outline: none;
 }
 
