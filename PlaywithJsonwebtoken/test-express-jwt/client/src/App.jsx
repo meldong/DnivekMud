@@ -22,14 +22,16 @@ function App() {
       {user === null ? (
         <div className="login">
           <form onSubmit={handleSubmit}>
-            <span className="formTitle">Login</span>
+            <span className="formTitle">DESIGN MANAGER</span>
             <input
               type="text"
+              className="textbox"
               placeholder="username"
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"
+              className="textbox"
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -39,7 +41,7 @@ function App() {
           </form>
         </div>
       ) : (
-        <span>User has been loggedIn </span>
+        <span>User has been logged in.</span>
       )}
     </div>
   );
