@@ -1,0 +1,2 @@
+https://faun.pub/building-secure-user-authentication-with-jwt-a-deep-dive-into-json-web-tokens-b7b96b3256ad
+https://medium.com/@ritikkhndelwal/jwt-authentication-in-the-frontend-enhancing-security-in-web-applications-ece418206b4f

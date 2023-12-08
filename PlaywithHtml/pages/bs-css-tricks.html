@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TIPS AND TRICKS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+            clip-path: circle(50% at 0 0);
+            transition: all 2s ease;
+        }
+
+        .box:hover {
+            clip-path: circle(100%);
+        }
+
+        .frame {
+            width: 300px;
+            height: 200px;
+            border: 3px solid rebeccapurple;
+            perspective: 800px;
+        }
+
+        .shape {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            transform: rotateY(45deg);
+            transition: all 3s ease;
+        }
+
+        .player {
+            width: 100%;
+            background-color: black;
+            aspect-ratio: 16/9;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .img {
+            filter: blur(2px);
+        }
+
+        .img2 {
+            filter: contrast(200%);
+        }
+
+        .img3 {
+            filter: grayscale(100);
+        }
+
+        img:active {
+            filter: none;
+        }
+
+        input {
+            margin: 20px;
+            padding: 20px;
+            width: 100%;
+            border: 1px solid red;
+            border-radius: 40px;
+            caret-color: red;
+        }
+
+        input:focus {
+            outline: 1px solid red;
+        }
+
+        input::placeholder {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                I
+                <!-- clip-path -->
+                <div class="box"></div>
+            </div>
+            <div class="col-md-4">
+                II
+                <!-- perspective -->
+                <div class="frame">
+                    <div class="shape"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                III
+                <!-- aspect-ratio -->
+                <div class="player"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- filters -->
+            <div class="col-md-4">
+                <img class="img" src="../assets/images/stag-1998855_1920.jpg" alt="">
+            </div>
+            <div class="col-md-4">
+                <img class="img2" src="../assets/images/stag-1998855_1920.jpg" alt="">
+            </div>
+            <div class="col-md-4">
+                <img class="img3" src="../assets/images/stag-1998855_1920.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="text" placeholder="Search...">
+        </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
