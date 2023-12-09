@@ -1,3 +1,6 @@
 npx create-next-app@13.4
 
 https://jsonplaceholder.typicode.com/
+
+* in fetch remove cache: "no-store" to see the timestamp in build
+
