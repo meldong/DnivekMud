@@ -1,0 +1,22 @@
+<EmployeeInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://CommonService.atsex.asmpt.com/">
+<EmployeeName>Cheng Man Hon, John</EmployeeName>
+<EmployeeCname>鄭文瀚</EmployeeCname>
+<EmployeeBadge>10008519</EmployeeBadge>
+<CompCode>K000</CompCode>
+<Site>HKG</Site>
+<DeptCode>K00090413</DeptCode>
+<DeptName>ATHK TECHNOLOGY DEVELOP - MOTOR/MODULE</DeptName>
+<CostCenter>K00090413</CostCenter>
+<Position>Thermal Engineer</Position>
+<EmployeeClass>E</EmployeeClass>
+<JoinDate>2018-08-01T00:00:00</JoinDate>
+<EmployeeStatus>3</EmployeeStatus>
+<EmployeeExt>82607</EmployeeExt>
+<Email>john.cheng@asmpt.com</Email>
+<EmployeeSex>M</EmployeeSex>
+<EmployeeGrade>E1</EmployeeGrade>
+<EeGroup>2</EeGroup>
+<Domain>AHKEX</Domain>
+<DomainAcc>aenmhcheng</DomainAcc>
+<EeSubGroup>EA</EeSubGroup>
+</EmployeeInfo>
