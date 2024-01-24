@@ -1,2 +1,4 @@
 Created on      May 23, 2023
 Last updated on Jan 24, 2024
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
