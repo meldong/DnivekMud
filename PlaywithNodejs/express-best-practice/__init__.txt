@@ -2,4 +2,36 @@
 Created on      Mar 14, 2024
 Last updated on Mar 14, 2024
 
+https://faun.pub/best-practices-for-organizing-your-express-js-project-a-guide-to-folder-structure-f990db979ee7
+
 >> npm init -y
+
+project-root/
+|-- controllers/
+|-- models/
+|-- views/
+|-- routes/
+|   |-- userRoutes.js
+|   |-- productRoutes.js
+|   |-- index.js
+|-- middleware/
+|   |-- authentication.js
+|   |-- logging.js
+|-- config/
+|   |-- database.js
+|   |-- environment.js
+|-- public/
+|   |-- styles/
+|   |-- images/
+|   |-- scripts/
+|-- utils/
+|   |-- validation.js
+|   |-- helpers.js
+|-- tests/
+|   |-- unit/
+|   |   |-- user.test.js
+|   |-- integration/
+|   |   |-- authentication.test.js
+|-- logs/
+|   |-- application.log
+|   |-- error.log
