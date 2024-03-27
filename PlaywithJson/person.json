@@ -1,0 +1,14 @@
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "address": null,
+  "hasPets": true,
+  "pets": ["chat", "cheval", "chien"],
+  "dependants": [
+    {
+      "name": "Alice",
+      "age": 25,
+      "isStudent": true
+    }
+  ]
+}
